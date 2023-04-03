@@ -33,3 +33,10 @@ li {
     justify-content: flex-end;
     margin-right: 30px;
 }
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
