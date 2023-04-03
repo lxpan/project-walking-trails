@@ -1,0 +1,26 @@
+.Header {
+    height: 60px;
+    width: 100vw;
+    border: solid 1px black;
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Header-title {
+    font-size: 1.5rem;
+    margin-left: 30px;
+}
+
+nav li {
+    display: inline;
+    padding: 8px;
+
+}
+
+.nav-list__right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
