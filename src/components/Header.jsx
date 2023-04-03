@@ -5,11 +5,12 @@ import '../styles/Header.css';
 function Header() {
     return (
         <div className="Header">
-            <span className="Header-title">WalkingTrails</span>
-            <nav>
-                <ul className="nav-list__left">
+            <nav className="nav-list__left">
+                <ul>
                     <Link to="/">
-                        <li>WalkingTrails</li>
+                        <li>
+                            <span className="Header-title">WalkingTrails</span>
+                        </li>
                     </Link>
                     <Link to="/explore">
                         <li>Explore</li>
