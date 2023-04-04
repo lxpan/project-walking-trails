@@ -12,9 +12,11 @@ import './styles/App.css';
 
 function App() {
     const state = useAppState();
+    const action = useActions();
 
     useEffect(() => {
-        console.log(state);
+        // console.log(state);
+        action.getTrails();
     }, []);
 
     return (
