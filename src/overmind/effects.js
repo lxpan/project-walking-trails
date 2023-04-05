@@ -1,10 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
+import {
+    getFirestore, collection, doc, getDocs, setDoc, deleteDoc,
+} from 'firebase/firestore/lite';
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 // Your web app's Firebase configuration
-
 const firebaseConfig = {
     apiKey: 'AIzaSyBOirK1XQJqP_p_DhEB5kjldjtmu7K9v1c',
     authDomain: 'walking-trails-e8037.firebaseapp.com',
@@ -14,12 +14,24 @@ const firebaseConfig = {
     appId: '1:225102397227:web:4ed6326f39f572348e4f6e',
 };
 
-// Initialize Firebase
+// We use IIFE to hide the private "app" variable
+export const api = (() => {
+    let app;
+    let db;
+    return {
+        initialize() {
+            app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+        },
+        async getTrails() {
+            const _collection = collection(db, 'trails');
+            const snapshot = await getDocs(_collection);
 
-const app = initializeApp(firebaseConfig);
+            const result = snapshot.docs.map((_doc) => ({
+                [_doc.id]: _doc.data(),
+            }));
 
-const trailsApi = {
-    getTrailsFromServer() {},
-};
-
-export default trailsApi;
+            return result;
+        },
+    };
+})();

@@ -13,10 +13,11 @@ import './styles/App.css';
 function App() {
     const state = useAppState();
     const action = useActions();
+    const effects = useEffects();
 
     useEffect(() => {
-        // console.log(state);
-        action.getTrails();
+        action.onInitializeOvermind();
+        console.log(state.trails);
     }, []);
 
     return (
