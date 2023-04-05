@@ -3,6 +3,7 @@ import { initializeApp } from 'firebase/app';
 import {
     getFirestore, collection, doc, getDocs, setDoc, deleteDoc,
 } from 'firebase/firestore/lite';
+import seedTrail from './seed';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,6 +19,7 @@ const firebaseConfig = {
 export const api = (() => {
     let app;
     let db;
+    const trailsCollection = 'trails';
     return {
         initialize() {
             app = initializeApp(firebaseConfig);
@@ -32,6 +34,25 @@ export const api = (() => {
             }));
 
             return result;
+        },
+        async writeDocument(documentName, documentJSON) {
+            // Add new project entry to the Firebase database.
+            try {
+                let json;
+                if (typeof documentJSON === 'string') {
+                    json = JSON.parse(documentJSON);
+                }
+                else {
+                    json = documentJSON;
+                }
+
+                await setDoc(doc(db, trailsCollection, documentName), {
+                    ...json,
+                });
+            }
+            catch (error) {
+                console.error('Error writing new project to Firebase Database', error);
+            }
         },
     };
 })();
