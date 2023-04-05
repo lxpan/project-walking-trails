@@ -19,7 +19,8 @@
         "operator-linebreak": ["error", "after"],
         "class-methods-use-this": ["error", { "exceptMethods": ["render"] }],
         "no-param-reassign": ["error", { "props": false }],
-        "new-cap": ["error", { "newIsCapExceptions": ["jsPDF"] }]
+        "new-cap": ["error", { "newIsCapExceptions": ["jsPDF"] }],
+        "import/prefer-default-export": "off"
     },
     "settings": {
         "react": {
