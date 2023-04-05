@@ -3,7 +3,7 @@ import { initializeApp } from 'firebase/app';
 import {
     getFirestore, collection, doc, getDocs, setDoc, deleteDoc,
 } from 'firebase/firestore/lite';
-import seedTrail from './seed';
+import seedTrails from './seed';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -53,6 +53,11 @@ export const api = (() => {
             catch (error) {
                 console.error('Error writing new project to Firebase Database', error);
             }
+        },
+        migrateTrails() {
+            seedTrails.forEach((trail) => {
+                this.writeDocument(trail.name, trail);
+            });
         },
     };
 })();

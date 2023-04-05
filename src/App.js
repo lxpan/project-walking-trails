@@ -17,8 +17,11 @@ function App() {
 
     useEffect(() => {
         action.onInitializeOvermind();
-        console.log(state.trails);
     }, []);
+
+    useEffect(() => {
+        console.log(state.trails);
+    }, [state.trails]);
 
     return (
         <div className="App">
