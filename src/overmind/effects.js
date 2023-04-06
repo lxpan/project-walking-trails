@@ -5,7 +5,7 @@ import {
 } from 'firebase/firestore/lite';
 import seedTrails from './seed';
 
-// Your web app's Firebase configuration
+// Firebase configuration details
 const firebaseConfig = {
     apiKey: 'AIzaSyBOirK1XQJqP_p_DhEB5kjldjtmu7K9v1c',
     authDomain: 'walking-trails-e8037.firebaseapp.com',
@@ -15,7 +15,7 @@ const firebaseConfig = {
     appId: '1:225102397227:web:4ed6326f39f572348e4f6e',
 };
 
-// We use IIFE to hide the private "app" variable
+// Use IIFE to hide outer private variables
 export const api = (() => {
     let app;
     let db;
@@ -25,6 +25,7 @@ export const api = (() => {
             app = initializeApp(firebaseConfig);
             db = getFirestore(app);
         },
+        // retrieves all trails from the collection
         async getTrails() {
             const _collection = collection(db, 'trails');
             const snapshot = await getDocs(_collection);
@@ -35,6 +36,7 @@ export const api = (() => {
 
             return result;
         },
+        // writes a single document to the collection
         async writeDocument(documentName, documentJSON) {
             // Add new project entry to the Firebase database.
             try {
@@ -54,7 +56,7 @@ export const api = (() => {
                 console.error('Error writing new project to Firebase Database', error);
             }
         },
-        // deletes all documents from 'trails' individually
+        // delete all documents from 'trails' individually
         async wipeTrails() {
             const _collection = collection(db, 'trails');
             const snapshot = await getDocs(_collection);
@@ -63,6 +65,7 @@ export const api = (() => {
                 deleteDoc(doc(_collection, _doc.id));
             });
         },
+        // uploads our seed trail objects from seed.js
         migrateTrails() {
             seedTrails.forEach((trail) => {
                 this.writeDocument(trail.id, trail);
