@@ -54,9 +54,18 @@ export const api = (() => {
                 console.error('Error writing new project to Firebase Database', error);
             }
         },
+        // deletes all documents from 'trails' individually
+        async wipeTrails() {
+            const _collection = collection(db, 'trails');
+            const snapshot = await getDocs(_collection);
+
+            snapshot.docs.forEach((_doc) => {
+                deleteDoc(doc(_collection, _doc.id));
+            });
+        },
         migrateTrails() {
             seedTrails.forEach((trail) => {
-                this.writeDocument(trail.name, trail);
+                this.writeDocument(trail.id, trail);
             });
         },
     };
