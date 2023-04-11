@@ -25,16 +25,24 @@ export const api = (() => {
             app = initializeApp(firebaseConfig);
             db = getFirestore(app);
         },
-        // retrieves all trails from the collection
-        async getTrails() {
+        // queries Firestore for trail data
+        async nodeQuery() {
+            const trailsObj = {};
             const _collection = collection(db, 'trails');
             const snapshot = await getDocs(_collection);
 
-            const result = snapshot.docs.map((_doc) => ({
-                [_doc.id]: _doc.data(),
-            }));
+            snapshot.forEach((_doc) => {
+                const { name, id } = _doc.data();
+                const trail = {
+                    [_doc.id]: { name, id },
+                };
+                Object.assign(trailsObj, trail);
+            });
 
-            return result;
+            return trailsObj;
+        },
+        async mockQuery() {
+            return seedTrails;
         },
         // writes a single document to the collection
         async writeDocument(documentName, documentJSON) {
