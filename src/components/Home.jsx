@@ -32,6 +32,13 @@ function Home() {
             <div className="Home-splash" style={splashStyle}>
                 <h1 className="Home-splash__h1">Are You Ready, Lou?</h1>
             </div>
+            <div className="Home-trails">
+                <h1>Local favourites near Ballarat</h1>
+                {console.log(trails)}
+                {Object.values(trails).map((t) => (
+                    <div key={t.id}>{t.name}</div>
+                ))}
+            </div>
         </div>
     );
 }
