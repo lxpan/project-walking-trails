@@ -17,3 +17,8 @@
     font-size: 3rem;
     color: black;
 }
+
+.Home-trail-cards {
+    display: grid;
+    grid-template-columns: repeat(200px);
+}
