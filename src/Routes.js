@@ -1,7 +1,5 @@
-import toGeoJson from '@mapbox/togeojson';
-import { DOMParser } from 'xmldom';
 import length from '@turf/length';
-import geoJson from './gpx/hike.json';
+import geoJson from './geoJson/buninyong.json';
 
 export default function geoRoutes() {
     // calculate distance using geoJson
