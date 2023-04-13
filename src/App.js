@@ -8,7 +8,12 @@ import Saved from './components/Saved';
 import Footer from './components/Footer';
 import './styles/App.css';
 
+import geoRoutes from './Routes';
+
 function App() {
+    const geo = geoRoutes();
+    console.log(geo);
+
     return (
         <div className="App">
             <HashRouter>
