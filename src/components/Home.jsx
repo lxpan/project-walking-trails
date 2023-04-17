@@ -14,11 +14,11 @@ function Home() {
     };
 
     useEffect(() => {
-        actions.getTrails();
+        actions.trails.getTrails();
     }, []);
 
     useEffect(() => {
-        // console.log(trails);
+        console.log(trails);
     }, [trails]);
 
     // const trailItems = trails.map((t, index) => <li key={index}>{t.name}</li>);
@@ -34,9 +34,10 @@ function Home() {
             </div>
             <div className="Home-trails">
                 <h1>Local favourites near Ballarat</h1>
-                {console.log(trails)}
-                {Object.values(trails).map((t) => (
-                    <div key={t.id}>{t.name}</div>
+                {Object.values(trails).map((t, index) => (
+                    // concatenating the index to id stops the "use a key" message
+                    // even though the id should be sufficient on its own
+                    <div key={`${t.id}-${index}`}>{t.name}</div>
                 ))}
             </div>
         </div>

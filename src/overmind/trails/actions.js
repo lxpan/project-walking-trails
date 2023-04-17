@@ -11,16 +11,17 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export const onInitializeOvermind = async ({ state, effects }) => {
-    // effects.api.initialize();
-    // state.trails = await effects.api.getTrails();
-};
+// export const onInitializeOvermind = async ({ state, effects }) => {
+//     effects.api.initialize();
+//     state.trails = await effects.api.getTrails();
+// };
 
 // calls the backend and loads resulting data into state
 export const getTrails = async ({ state, effects }) => {
     state.loading = true;
-    effects.api.initialize();
-    const trails = await effects.api.nodeQuery();
+    effects.trails.api.initialize();
+    // .trails needed due to use of namespaces
+    const trails = await effects.trails.api.nodeQuery();
     state.trails = trails;
     state.loading = false;
 };
