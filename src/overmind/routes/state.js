@@ -1,3 +1,5 @@
-const state = {};
+const state = {
+    routes: {},
+};
 
 export default state;

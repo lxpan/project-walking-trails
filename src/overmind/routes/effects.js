@@ -1,25 +1,48 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
+
 import {
-    getFirestore, collection, doc, getDocs, setDoc, deleteDoc,
-} from 'firebase/firestore/lite';
+    getDatabase, ref, onValue, child, get, set,
+} from 'firebase/database';
 import firebaseConfig from '../firebaseConfig';
+import routeImports from '../../utils/routeImports';
 
 // Use IIFE to hide outer private variables
 export const api = (() => {
     let app;
     let db;
-    const routesCollection = 'routes';
     return {
         initialize() {
             app = initializeApp(firebaseConfig);
-            db = getFirestore(app);
+            db = getDatabase(app);
         },
-        async getRoutes() {
-            const routesObj = {};
-            const _collection = collection(db, 'trails');
-            const snapshot = await getDocs(_collection);
+        async getData() {
+            const routeRef = ref(db, '/buninyong');
+            onValue(routeRef, (snapshot) => {
+                const data = snapshot.val();
+                console.log(data);
+            });
         },
-        // queries Firestore for trail data
+        async getDataOnce(_routeId) {
+            const dbRef = ref(getDatabase());
+            get(child(dbRef, _routeId))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        console.log(snapshot.val());
+                    }
+                    else {
+                        console.log('No data available');
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+        },
+        async migrateRoutes() {
+            // const geo = routeImports['creswick-circuit-walk'];
+            Object.entries(routeImports).forEach(([routeId, json]) => {
+                set(ref(db, `${routeId}`), json);
+            });
+        },
     };
 })();
