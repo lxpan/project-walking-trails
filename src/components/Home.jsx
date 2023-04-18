@@ -17,9 +17,9 @@ function Home() {
         actions.trails.getTrails();
     }, []);
 
-    useEffect(() => {
-        console.log(trails);
-    }, [trails]);
+    // useEffect(() => {
+    //     console.log(trails);
+    // }, [trails]);
 
     // const trailItems = trails.map((t, index) => <li key={index}>{t.name}</li>);
 
