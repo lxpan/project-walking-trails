@@ -7,6 +7,7 @@ import firebaseConfig from '../firebaseConfig';
 import seedTrails from './seed';
 import geoRoutes from '../../utils/geoJsonUtils';
 
+// currently serves as a mock for the backend
 export const api = (() => ({
     initialize() {},
     loadRoutes() {
