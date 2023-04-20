@@ -12,9 +12,9 @@ function Map() {
 
     const mapContainer = useRef(null);
     const map = useRef(null);
-    const [lng, setLng] = useState(-70.9);
-    const [lat, setLat] = useState(42.35);
-    const [zoom, setZoom] = useState(9);
+    const [lng, setLng] = useState(143.9221);
+    const [lat, setLat] = useState(-37.655);
+    const [zoom, setZoom] = useState(13.2);
 
     // initialise the map right after component load
     useEffect(() => {
@@ -26,6 +26,32 @@ function Map() {
             style: 'mapbox://styles/mapbox/outdoors-v11',
             center: [lng, lat],
             zoom,
+        });
+
+        map.current.on('load', () => {
+            routes.forEach((route) => {
+                const { slug } = route;
+                // 1. Add the source using the slug as unique id
+                map.current.addSource(slug, {
+                    type: 'geojson',
+                    data: route.geoJson,
+                });
+
+                // 2. Add a layer displaying our route
+                map.current.addLayer({
+                    id: slug,
+                    type: 'line',
+                    source: slug, // same id as above
+                    layout: {
+                        'line-join': 'round',
+                        'line-cap': 'round',
+                    },
+                    paint: {
+                        'line-color': 'red',
+                        'line-width': 4,
+                    },
+                });
+            });
         });
     });
 
