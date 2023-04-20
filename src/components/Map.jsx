@@ -62,6 +62,27 @@ function Map() {
                         'line-width': 4,
                     },
                 });
+
+                map.current.addLayer({
+                    id: `${slug}-fill`,
+                    type: 'fill',
+                    source: slug,
+                    paint: {
+                        'fill-color': 'transparent',
+                        'fill-outline-color': 'transparent',
+                    },
+                });
+
+                map.current.on('mouseenter', `${slug}-fill`, () => {
+                    // Change cursor on hover?
+                    map.current.getCanvas().style.cursor = 'pointer';
+                    map.current.setPaintProperty(slug, 'line-width', 6);
+                });
+
+                map.current.on('mouseleave', `${slug}-fill`, () => {
+                    map.current.getCanvas().style.cursor = '';
+                    map.current.setPaintProperty(slug, 'line-width', 4);
+                });
             });
         });
     });
