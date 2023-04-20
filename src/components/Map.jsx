@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { useAppState } from '../overmind';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../styles/Map.css';
@@ -7,6 +8,8 @@ mapboxgl.accessToken =
     'pk.eyJ1IjoibHBhbmRldiIsImEiOiJjbGdlZnFvNDEwdTF0M3JyeW5nNjF0bHg2In0.FeOaetmAXx5D4hb1A4e-hg';
 
 function Map() {
+    const { routes } = useAppState();
+
     const mapContainer = useRef(null);
     const map = useRef(null);
     const [lng, setLng] = useState(-70.9);
@@ -15,6 +18,8 @@ function Map() {
 
     // initialise the map right after component load
     useEffect(() => {
+        // console.log('routes state in Map component');
+        // console.log(routes);
         if (map.current) return; // initialize map only once
         map.current = new mapboxgl.Map({
             container: mapContainer.current,

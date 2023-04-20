@@ -5,9 +5,17 @@ import {
 } from 'firebase/firestore/lite';
 import firebaseConfig from '../firebaseConfig';
 import seedTrails from './seed';
+import geoRoutes from '../../utils/geoJsonUtils';
+
+export const api = (() => ({
+    initialize() {},
+    loadRoutes() {
+        return geoRoutes;
+    },
+}))();
 
 // Use IIFE to hide outer private variables
-export const api = (() => {
+export const _api = (() => {
     let app;
     let db;
     const trailsCollection = 'trails';
