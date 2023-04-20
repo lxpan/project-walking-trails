@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import bbox from '@turf/bbox';
 import { useAppState } from '../overmind';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -73,15 +74,25 @@ function Map() {
                     },
                 });
 
+                // Change cursor on route fill hover
                 map.current.on('mouseenter', `${slug}-fill`, () => {
-                    // Change cursor on hover?
                     map.current.getCanvas().style.cursor = 'pointer';
                     map.current.setPaintProperty(slug, 'line-width', 6);
                 });
 
+                // Restore cursor on route fill exit
                 map.current.on('mouseleave', `${slug}-fill`, () => {
                     map.current.getCanvas().style.cursor = '';
                     map.current.setPaintProperty(slug, 'line-width', 4);
+                });
+
+                map.current.on('click', `${slug}-fill`, () => {
+                    const bounds = bbox(route.geoJson);
+
+                    // pan map to bounds
+                    map.current.fitBounds(bounds, {
+                        padding: 20,
+                    });
                 });
             });
         });
