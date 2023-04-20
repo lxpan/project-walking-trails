@@ -29,6 +29,7 @@ function Map() {
         });
 
         map.current.on('load', () => {
+            map.current.resize();
             routes.forEach((route) => {
                 const { slug } = route;
                 // 1. Add the source using the slug as unique id
