@@ -20,7 +20,7 @@ function Home() {
         // actions.routes.getRoute('creswick-circuit-walk');
         // actions.routes.getRoute('cosgrove-reservoir-loop');
         // actions.routes.writeRoutesToDatabase();
-        console.log(geoRoutes);
+        // console.log(geoRoutes);
     }, []);
 
     // useEffect(() => {
