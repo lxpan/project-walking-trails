@@ -11,6 +11,7 @@
         "@turf/turf": "^6.5.0",
         "firebase": "^9.19.1",
         "gh-pages": "^5.0.0",
+        "mapbox-gl": "^2.14.1",
         "overmind": "^28.0.2",
         "overmind-devtools": "^29.0.2",
         "overmind-react": "^29.0.2",
