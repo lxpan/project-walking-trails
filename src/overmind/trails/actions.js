@@ -11,17 +11,13 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export const onInitializeOvermind = async ({ state, actions, effects }, overmind) => {
-    const initialRoutes = effects.trails.api.loadRoutes();
-    state.routes = initialRoutes;
-};
-
 // calls the backend and loads resulting data into state
 export const getTrails = async ({ state, effects }) => {
     state.loading = true;
     effects.trails.api.initialize();
     // .trails needed due to use of namespaces
     const trails = await effects.trails.api.nodeQuery();
+    console.log(trails);
     state.trails = trails;
     state.loading = false;
 };
