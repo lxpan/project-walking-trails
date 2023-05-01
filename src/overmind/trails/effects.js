@@ -23,9 +23,9 @@ export const api = (() => {
             const snapshot = await getDocs(_collection);
 
             snapshot.forEach((_doc) => {
-                const { name, id } = _doc.data();
+                const { id } = _doc.data();
                 const trail = {
-                    [_doc.id]: { name, id },
+                    [_doc.id]: _doc.data(),
                 };
                 Object.assign(trailsObj, trail);
             });
