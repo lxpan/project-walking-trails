@@ -3,10 +3,10 @@ import { useAppState, useActions } from '../overmind';
 import '../styles/Home.css';
 import splashImg from '../assets/images/home-splash.jpg';
 // import splashImg from '../assets/images/creswick-forest.jpg';
-import geoRoutes from '../utils/geoJsonUtils';
+import TrailCard from './TrailCard';
 
 function Home() {
-    const { trails, loading, routes } = useAppState();
+    const { trails, loading } = useAppState();
     const actions = useActions();
 
     const splashStyle = {
@@ -15,7 +15,7 @@ function Home() {
     };
 
     useEffect(() => {
-        // actions.trails.getTrails();
+        actions.trails.getTrails();
         // actions.routes.migrateRoutesAction();
         // actions.routes.getRoute('creswick-circuit-walk');
         // actions.routes.getRoute('cosgrove-reservoir-loop');
@@ -40,11 +40,13 @@ function Home() {
             </div>
             <div className="Home-trails">
                 <h1>Local favourites near Ballarat</h1>
-                {Object.values(trails).map((t, index) => (
-                    // concatenating the index to id stops the "use a key" message
-                    // even though the id should be sufficient on its own
-                    <div key={`${t.id}-${index}`}>{t.name}</div>
-                ))}
+                <div className="Home-trail-card-grid">
+                    {Object.values(trails).map((trail, index) => (
+                        // concatenating the index to id stops the "use a key" message
+                        // even though the id should be sufficient on its own
+                        <TrailCard key={`${trail.id}-${index}`} trail={trail} />
+                    ))}
+                </div>
             </div>
         </div>
     );
