@@ -2,7 +2,7 @@ const seedTrails = [
     {
         id: 'creswick-circuit-walk',
         name: 'Creswick Circuit Walk',
-        area: 'Creswick State Forest',
+        area: 'creswick-state-forest',
         description:
             'An awesome trail exploring some of the bushland to the east of the town of Creswick, Victoria',
         difficulty: 'medium',
