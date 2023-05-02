@@ -9,16 +9,16 @@ mapboxgl.accessToken =
     'pk.eyJ1IjoibHBhbmRldiIsImEiOiJjbGdlZnFvNDEwdTF0M3JyeW5nNjF0bHg2In0.FeOaetmAXx5D4hb1A4e-hg';
 
 const palette = require('tailwindcss/colors'); // eslint-disable-line
-const COLOURS = [
-    palette.blue[500],
-    palette.indigo[500],
-    palette.orange[400],
-    palette.emerald[500],
-    palette.purple[500],
-    palette.red[500],
-];
 
 function Map() {
+    const COLOURS = [
+        palette.blue[500],
+        palette.indigo[500],
+        palette.orange[400],
+        palette.emerald[500],
+        palette.purple[500],
+        palette.red[500],
+    ];
     const { routes } = useAppState();
 
     const mapContainer = useRef(null);
@@ -96,7 +96,9 @@ function Map() {
                 });
             });
         });
-    });
+        // clean up map object when component unmounts or user leaves page
+        return () => map.current.remove();
+    }, []); // runs when component mounts
 
     // store new coordinates as user moves the map
     useEffect(() => {
