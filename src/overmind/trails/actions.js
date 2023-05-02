@@ -23,9 +23,9 @@ export const getTrails = async ({ state, effects }) => {
 };
 
 export const migrateTrailsData = async ({ effects }) => {
-    effects.api.initialize();
+    effects.trails.api.initialize();
 
-    await effects.api.wipeTrails();
-    sleep(5000);
-    effects.api.migrateTrails();
+    await effects.trails.api.wipeTrails();
+    // sleep(5000);
+    effects.trails.api.migrateTrails();
 };
