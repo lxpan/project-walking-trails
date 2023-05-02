@@ -1,5 +1,6 @@
 import React from 'react';
 import placeholderThumbnail from '../assets/images/alltrails-sized-placeholder.jpg';
+import { unslugify } from '../utils/utils';
 import '../styles/TrailCard.css';
 
 function TrailCard({ trail }) {
@@ -10,7 +11,7 @@ function TrailCard({ trail }) {
             </figure>
             <div className="card-body">
                 <h2>{trail.name}</h2>
-                <div>{trail.area}</div>
+                <div>{unslugify(trail.area)}</div>
                 <div>{trail.difficulty}</div>
                 <div>Length: {trail.distance} km</div>
             </div>
