@@ -11,7 +11,28 @@
     color: black;
 }
 
-.trail-card h2,
+.TrailCard-difficulty-ratings {
+    padding-top: 8px;
+    font-size: 0.8rem;
+}
+
+.TrailCard-trail-name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.TrailCard-trail-area {
+    font-size: 0.9rem;
+    color: slateblue;
+    font-weight: bold;
+}
+
+.TrailCard-trail-length {
+    font-size: 0.85rem;
+    color: slategray;
+}
+
+.trail-card h3,
 .trail-card {
     transition: color 0.4s ease-in-out;
 }
@@ -28,19 +49,19 @@
     transform: scale(1.06);
 }
 
-.trail-card:hover h2,
-.trail-card:focus h2 {
+.trail-card:hover h3,
+.trail-card:focus h3 {
     color: #28666e;
 }
 
 
 
 .card-body {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 4px;
+    padding-bottom: 8px;
 }
 
-.card-body h2 {
+.card-body h3 {
     margin: 0;
     padding: 0;
 }
