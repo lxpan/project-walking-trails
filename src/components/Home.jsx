@@ -16,6 +16,7 @@ function Home() {
 
     useEffect(() => {
         // actions.trails.getTrails();
+        // actions.trails.migrateTrailsData();
         // actions.routes.migrateRoutesAction();
         // actions.routes.getRoute('creswick-circuit-walk');
         // actions.routes.getRoute('cosgrove-reservoir-loop');
