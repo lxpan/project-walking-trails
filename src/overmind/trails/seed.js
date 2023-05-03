@@ -97,7 +97,7 @@ const seedTrails = [
         area: 'lake-wendouree-vic-australia',
         description:
             'An enjoyable trail exploring some of the bushland and lakes to the east of Creswick, Victoria, with an optional detour to Cosgrove Reservoir.',
-        difficulty: 'Medium',
+        difficulty: 'easy',
         distance: 2.2,
         elevation_gain: 31,
         type: 'loop',
