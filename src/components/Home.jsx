@@ -20,15 +20,7 @@ function Home() {
         // actions.routes.migrateRoutesAction();
         // actions.routes.getRoute('creswick-circuit-walk');
         // actions.routes.getRoute('cosgrove-reservoir-loop');
-        // actions.trails.migrateTrailsData();
-        // console.log(geoRoutes);
     }, []);
-
-    // useEffect(() => {
-    //     console.log(routes);
-    // }, [routes]);
-
-    // const trailItems = trails.map((t, index) => <li key={index}>{t.name}</li>);
 
     if (loading) {
         return <div className="Home">Loading...</div>;
