@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import placeholderThumbnail from '../assets/images/alltrails-sized-placeholder.jpg';
 import { unslugify, capitalise } from '../utils/utils';
 import '../styles/TrailCard.css';
 
 function TrailCard({ trail }) {
     return (
-        <a href="#" className="trail-card">
+        <Link to={`/trail/${trail.id}`} className="trail-card">
             <figure>
                 <img src={placeholderThumbnail} alt="" />
             </figure>
@@ -15,7 +16,7 @@ function TrailCard({ trail }) {
                 <div className="TrailCard-trail-area">{unslugify(trail.area)}</div>
                 <div className="TrailCard-trail-length">Length: {trail.distance} km</div>
             </div>
-        </a>
+        </Link>
     );
 }
 
