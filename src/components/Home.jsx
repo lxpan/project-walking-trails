@@ -32,8 +32,10 @@ function Home() {
                 <h1 className="Home-splash__h1">Are You Ready, Lou?</h1>
             </div>
             <div className="Home-trails">
-                <h1>Local favourites near Ballarat</h1>
                 <div className="Home-trail-card-grid">
+                    <h1 className="Home-trail-card-grid__heading">
+                        Local favourites near Ballarat
+                    </h1>
                     {Object.values(trails).map((trail, index) => (
                         // concatenating the index to id stops the "use a key" message
                         // even though the id should be sufficient on its own
