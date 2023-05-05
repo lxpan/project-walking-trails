@@ -1,6 +1,6 @@
 export const onInitializeOvermind = async ({ state, actions, effects }, overmind) => {
     const initialRoutes = effects.routes.api.loadRoutes();
-    console.log(initialRoutes);
+    // console.log(initialRoutes);
     state.routes = initialRoutes;
 };
 

@@ -17,7 +17,7 @@ export const getTrails = async ({ state, effects }) => {
     effects.trails.api.initialize();
     // .trails needed due to use of namespaces
     const trails = await effects.trails.api.nodeQuery();
-    console.log(trails);
+    // console.log(trails);
     state.trails = trails;
     state.loading = false;
 };
