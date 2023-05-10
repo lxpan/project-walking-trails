@@ -8,6 +8,7 @@ import { merge, namespaced } from 'overmind/config';
 import state from './state';
 import * as trails from './trails';
 import * as routes from './routes';
+import * as locations from './locations';
 
 export const config = merge(
     {
@@ -16,6 +17,7 @@ export const config = merge(
     namespaced({
         trails,
         routes,
+        locations,
     }),
 );
 
