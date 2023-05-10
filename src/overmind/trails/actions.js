@@ -30,6 +30,6 @@ export const migrate = async ({ effects }) => {
     effects.trails.api.initialize();
 
     await effects.trails.api.wipeTrails();
-    // sleep(5000);
+    sleep(2000);
     effects.trails.api.migrateTrails();
 };
