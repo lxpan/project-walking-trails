@@ -6,20 +6,25 @@ import '../styles/Trail.css';
 
 function Trail() {
     const { id } = useParams();
-    const { trails } = useAppState();
+    const { trails, locations } = useAppState();
 
     const trail = trails[id];
+    const loc = locations[trail.area];
+    const locDisplayName = `${loc.name}, ${loc.state}, ${loc.country}`;
 
     useEffect(() => {
-        console.log(trail);
+        console.log(trail.area);
+        console.log(loc);
     }, [trails]);
 
     return (
         <div className="Trail">
             <div className="Trail-contents">
-                <div className="trail-breadcrumbs">{`Australia > Victoria > ${unslugify(
-                    trail.area,
-                )} > ${trail.name}`}</div>
+                <div className="trail-breadcrumbs">
+                    {`${capitalise(loc.country)} > ${capitalise(loc.state)} > ${loc.name} > ${
+                        trail.name
+                    }`}
+                </div>
                 <div className="trail-header">
                     <h2 className="trail-header-trail-heading">{trail.name}</h2>
                     <span className="trail-header-trail-difficulty">
