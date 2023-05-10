@@ -37,7 +37,7 @@ const seedTrails = [
     {
         id: 'cosgrove-reservoir-loop',
         name: 'Cosgrove Reservoir Loop',
-        area: 'creswick',
+        area: 'creswick-vic-australia',
         description:
             'A fun and engaging circuit that covers a good bit of ground around Cosgrove Reservoir in Creswick State Forest.',
         difficulty: 'medium',
@@ -94,7 +94,7 @@ const seedTrails = [
     {
         id: 'lake-wendouree-north-park',
         name: 'North Park via Lake Wendouree',
-        area: 'Ballarat',
+        area: 'ballarat-vic-australia',
         description:
             'An enjoyable trail exploring some of the bushland and lakes to the east of Creswick, Victoria, with an optional detour to Cosgrove Reservoir.',
         difficulty: 'easy',
