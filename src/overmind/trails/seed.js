@@ -2,7 +2,7 @@ const seedTrails = [
     {
         id: 'creswick-circuit-walk',
         name: 'Creswick Circuit Walk',
-        area: 'creswick-state-forest',
+        area: 'creswick-regional-park',
         description:
             'An awesome trail exploring some of the bushland to the east of the town of Creswick, Victoria',
         difficulty: 'medium',
@@ -94,7 +94,7 @@ const seedTrails = [
     {
         id: 'lake-wendouree-north-park',
         name: 'North Park via Lake Wendouree',
-        area: 'lake-wendouree-vic-australia',
+        area: 'Ballarat',
         description:
             'An enjoyable trail exploring some of the bushland and lakes to the east of Creswick, Victoria, with an optional detour to Cosgrove Reservoir.',
         difficulty: 'easy',
