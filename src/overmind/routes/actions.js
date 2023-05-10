@@ -10,7 +10,7 @@ export const getRoute = async ({ state, effects }, routeId) => {
     effects.routes.api.getDataOnce(routeId);
 };
 
-export const writeRoutesToDatabase = async ({ state, effects }) => {
+export const migrate = async ({ state, effects }) => {
     await effects.routes.api.initialize();
     // effects.routes.api.getData();
     effects.routes.api.migrateRoutes();

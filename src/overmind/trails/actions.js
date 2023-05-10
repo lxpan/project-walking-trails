@@ -26,7 +26,7 @@ export const onInitializeOvermind = async ({ state, actions, effects }, overmind
     actions.trails.getTrails();
 };
 
-export const migrateTrailsData = async ({ effects }) => {
+export const migrate = async ({ effects }) => {
     effects.trails.api.initialize();
 
     await effects.trails.api.wipeTrails();
