@@ -1,6 +1,7 @@
 const seedLocations = [
     {
         id: 'creswick-regional-park',
+        name: 'Creswick Regional Park',
         state: 'victoria',
         country: 'australia',
         type: 'regional_park',
@@ -9,6 +10,7 @@ const seedLocations = [
     },
     {
         id: 'mt-buninyong',
+        name: 'Mount Buninyong',
         state: 'victoria',
         country: 'australia',
         type: 'scenic_reserve',
@@ -17,6 +19,7 @@ const seedLocations = [
     },
     {
         id: 'creswick-vic-australia',
+        name: 'Creswick',
         state: 'victoria',
         country: 'australia',
         type: 'suburb',
@@ -25,6 +28,7 @@ const seedLocations = [
     },
     {
         id: 'you-yangs-regional-park',
+        name: 'You Yangs Regional Park',
         state: 'victoria',
         country: 'australia',
         type: 'regional_park',
@@ -33,6 +37,7 @@ const seedLocations = [
     },
     {
         id: 'ballarat-vic-australia',
+        name: 'Ballarat',
         state: 'victoria',
         country: 'australia',
         type: '',
