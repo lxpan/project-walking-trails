@@ -34,10 +34,10 @@ li {
     margin-right: 30px;
 }
 
-a:link,
-a:visited,
-a:hover,
-a:active {
+.Header a:link,
+.Header a:visited,
+.Header a:hover,
+.Header a:active {
     text-decoration: none;
     color: black;
 }
