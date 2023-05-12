@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useAppState } from '../overmind';
 import { capitalise } from '../utils/utils';
 import '../styles/Trail.css';
@@ -31,21 +31,32 @@ function Trail() {
         return <h1 style={{ fontSize: 100 }}>Loading...</h1>;
     }
 
+    const breadcrumbs = {
+        country: capitalise(loc?.country ?? 'Loading'),
+        state: capitalise(loc?.state ?? 'Loading'),
+        location: loc?.name ?? 'Loading',
+        trailName: trail.name,
+    };
+
     return (
         <div className="Trail">
             {trail && (
                 <div className="Trail-contents">
                     <div className="trail-breadcrumbs">
-                        {`${capitalise(loc?.country ?? 'Loading')} > ${capitalise(
-                            loc?.state ?? 'Loading',
-                        )} > ${loc?.name ?? 'Loading'} > ${trail.name}`}
+                        {breadcrumbs.country} &gt; {breadcrumbs.state} &gt;{' '}
+                        <Link to={`/location/${loc.id}`} className="trail-location-link">
+                            {breadcrumbs.location}
+                        </Link>{' '}
+                        &gt; {breadcrumbs.trailName}
                     </div>
                     <div className="trail-header">
                         <h2 className="trail-header-trail-heading">{trail.name}</h2>
                         <span className="trail-header-trail-difficulty">
                             {capitalise(trail.difficulty)}
                         </span>
-                        <span className="trail-header-trail-area">{loc?.name ?? 'Loading'}</span>
+                        <span className="trail-header-trail-area">
+                            <Link to={`/location/${trail.area}`}>{loc?.name ?? 'Loading'}</Link>
+                        </span>
                     </div>
                     <p>{trail.description}</p>
                 </div>
