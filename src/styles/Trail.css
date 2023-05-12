@@ -40,3 +40,15 @@
     font-weight: bold;
     text-decoration: underline;
 }
+
+.trail-header-trail-area>a:link,
+.trail-header-trail-area>a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.trail-location-link {
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+}
