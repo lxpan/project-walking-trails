@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useAppState, useActions } from '../overmind';
 import '../styles/Home.css';
 import splashImg from '../assets/images/home-splash.jpg';
@@ -32,7 +33,8 @@ function Home() {
             <div className="Home-trails">
                 <div className="Home-trail-card-grid">
                     <h1 className="Home-trail-card-grid__heading">
-                        Local favourites near Ballarat
+                        Local favourites near{' '}
+                        <Link to={'/location/ballarat-vic-australia'}>Ballarat</Link>
                     </h1>
                     {Object.values(trails).map((trail, index) => (
                         // concatenating the index to id stops the "use a key" message
