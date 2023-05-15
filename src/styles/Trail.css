@@ -19,7 +19,8 @@
 }
 
 .trail-header {
-    border-radius: 16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
