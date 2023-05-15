@@ -49,16 +49,25 @@ function Trail() {
                         </Link>{' '}
                         &gt; {breadcrumbs.trailName}
                     </div>
-                    <div className="trail-header">
-                        <h2 className="trail-header-trail-heading">{trail.name}</h2>
-                        <span className="trail-header-trail-difficulty">
-                            {capitalise(trail.difficulty)}
-                        </span>
-                        <span className="trail-header-trail-area">
-                            <Link to={`/location/${trail.area}`}>{loc?.name ?? 'Loading'}</Link>
-                        </span>
+                    <div className="trail-body">
+                        <div className="trail-header">
+                            <h2 className="trail-header-trail-heading">{trail.name}</h2>
+                            <span className="trail-header-trail-difficulty">
+                                {capitalise(trail.difficulty)}
+                            </span>
+                            <span className="trail-header-trail-area">
+                                <Link to={`/location/${trail.area}`}>{loc?.name ?? 'Loading'}</Link>
+                            </span>
+                        </div>
+                        <div className="trail-info">
+                            <div className="trail-stats">
+                                {trail.distance}
+                                {trail.elevation_gain}
+                                {trail.type}
+                            </div>
+                            <div className="trail-description">{trail.description}</div>
+                        </div>
                     </div>
-                    <p>{trail.description}</p>
                 </div>
             )}
         </div>

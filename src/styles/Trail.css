@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #FAF9F6;
 }
 
 .trail-breadcrumbs {
@@ -10,18 +11,22 @@
     margin-top: 10px;
     margin-bottom: 10px;
     color: black;
+}
 
+.trail-body {
+    display: flex;
+    flex-direction: column;
 }
 
 .trail-header {
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 250px;
     width: 60vw;
     padding: 30px;
-    background-color: darkgreen;
-    border-radius: 16px;
+    background-color: slateblue;
     color: white;
 }
 
@@ -51,4 +56,9 @@
     font-weight: bold;
     text-decoration: underline;
     color: black;
+}
+
+.trail-info {
+    background-color: white;
+    min-height: 300px;
 }
