@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
 }
 
 .trail-breadcrumbs {
@@ -18,11 +17,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 200px;
+    min-height: 250px;
     width: 60vw;
     padding: 30px;
     background-color: darkgreen;
     border-radius: 16px;
+    color: white;
 }
 
 .trail-header-trail-heading {
