@@ -78,7 +78,11 @@ function Trail() {
                                     </span>
                                 </div>
                             </div>
-                            <div className="trail-description">{trail.description}</div>
+                            <div className="trail-description">
+                                {
+                                    'Lorem ipsum odor amet, consectetuer adipiscing elit. Vel velit nec praesent viverra himenaeos vulputate accumsan placerat duis. Aenean volutpat pharetra congue nascetur sociosqu. Turpis hac enim curabitur sollicitudin elit lobortis pharetra iaculis mus. Scelerisque turpis justo molestie integer nulla nostra. Elementum nisi nulla gravida lectus purus at mauris mollis. Habitant id class vitae pulvinar dapibus velit est facilisi. Egestas taciti vestibulum; quis vel nam est sociosqu venenatis. Facilisis rutrum pharetra etiam dictum habitant iaculis molestie. Nisl primis quis ullamcorper cursus mus dignissim felis habitant.'
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
