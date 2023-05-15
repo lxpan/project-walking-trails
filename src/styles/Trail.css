@@ -60,6 +60,30 @@
 }
 
 .trail-info {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     min-height: 300px;
+    width: 60vw;
+    padding: 30px;
+}
+
+.trail-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.trail-stats-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.trail-stats-label {
+    font-size: .9rem;
+    color: slategray
+}
+
+.trail-stats-value {
+    font-weight: bold;
 }

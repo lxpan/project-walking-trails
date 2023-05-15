@@ -61,9 +61,22 @@ function Trail() {
                         </div>
                         <div className="trail-info">
                             <div className="trail-stats">
-                                {trail.distance}
-                                {trail.elevation_gain}
-                                {trail.type}
+                                <div className="trail-stats-column">
+                                    <span className="trail-stats-label">Distance</span>
+                                    <span className="trail-stats-value">{`${trail.distance} km`}</span>
+                                </div>
+                                <div className="trail-stats-column">
+                                    <span className="trail-stats-label">Elevation</span>
+                                    <span className="trail-stats-value">{`${trail.elevation_gain} m`}</span>
+                                </div>
+                                <div className="trail-stats-column">
+                                    <span className="trail-stats-label">Type</span>
+                                    <span className="trail-stats-value">
+                                        <span className="trail-stats-value">
+                                            {capitalise(trail.type)}
+                                        </span>
+                                    </span>
+                                </div>
                             </div>
                             <div className="trail-description">{trail.description}</div>
                         </div>
