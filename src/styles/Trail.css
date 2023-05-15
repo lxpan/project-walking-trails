@@ -66,6 +66,7 @@
     min-height: 300px;
     width: 60vw;
     padding: 30px;
+    gap: 20px;
 }
 
 .trail-stats {
@@ -86,4 +87,10 @@
 
 .trail-stats-value {
     font-weight: bold;
+}
+
+.trail-description {
+    /* margin-top: 20px; */
+    font-size: 1.1rem;
+    line-height: 26px;
 }
