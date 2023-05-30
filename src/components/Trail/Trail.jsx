@@ -4,6 +4,7 @@ import { useAppState } from '../../overmind';
 import { capitalise } from '../../utils/utils';
 import TrailTag from './TrailTag';
 import '../../styles/Trail/Trail.css';
+import TrailSummary from './TrailSummary';
 
 function Trail() {
     const { id } = useParams();
@@ -28,6 +29,8 @@ function Trail() {
     }, [trail, locations]);
 
     if (!(trail && loc)) {
+        console.log(trail);
+        console.log(loc);
         // placeholder loading message
         return <h1 style={{ fontSize: 100 }}>Loading...</h1>;
     }
@@ -85,6 +88,7 @@ function Trail() {
                                 }
                             </div>
                             <TrailTag tags={trail.tags} />
+                            <TrailSummary trail={trail} loc={loc} />
                         </div>
                     </div>
                 </div>
