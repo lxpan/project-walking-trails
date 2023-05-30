@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Explore from './components/Explore';
 import Saved from './components/Saved';
 import Footer from './components/Footer';
-import Trail from './components/Trail';
+import Trail from './components/Trail/Trail';
 import Location from './components/Location';
 import './styles/App.css';
 

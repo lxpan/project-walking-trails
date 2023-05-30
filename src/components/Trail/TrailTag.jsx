@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Trail/TrailTag.css';
+import '../../styles/Trail/TrailTag.css';
 
 function TrailTag({ tags }) {
     return (

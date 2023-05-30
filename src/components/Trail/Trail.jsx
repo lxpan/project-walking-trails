@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { useAppState } from '../overmind';
-import { capitalise } from '../utils/utils';
+import { useAppState } from '../../overmind';
+import { capitalise } from '../../utils/utils';
 import TrailTag from './TrailTag';
-import '../styles/Trail.css';
+import '../../styles/Trail/Trail.css';
 
 function Trail() {
     const { id } = useParams();
