@@ -1,0 +1,12 @@
+.TrailTag {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.TrailTag-tag {
+    border: solid 1.4px lightgray;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: slategray;
+}
