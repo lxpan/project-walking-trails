@@ -1,5 +1,5 @@
 import React from 'react';
-import { capitalise } from '../../utils/utils';
+import { capitalise, uncapitalise } from '../../utils/utils';
 
 function TrailSummary({ trail, loc }) {
     let summary = '';
@@ -22,7 +22,15 @@ function TrailSummary({ trail, loc }) {
 
     // todo: uncapitalise tags
     // todo: substitute "Dogs on leash" with "dog walking"
-    goodForString = `${trail.tags[0]}, ${trail.tags[1]} and ${trail.tags[2]}`;
+    const tags = [trail.tags[0], trail.tags[1], trail.tags[2]];
+    tags.forEach((tag, index) => {
+        if (index === tags.length - 1) {
+            goodForString += `and ${uncapitalise(tag)}`;
+        }
+        else {
+            goodForString += `${uncapitalise(tag)}, `;
+        }
+    });
 
     // todo: fill in with expected time taken
     timeString += `it takes an average of XhY min to complete. This is a very popular area for ${goodForString}, so you'll likely encounter other people.`;
