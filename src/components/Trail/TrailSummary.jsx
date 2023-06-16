@@ -8,6 +8,19 @@ function TrailSummary({ trail, loc }) {
     let goodForString = '';
     let timeString = '';
 
+    const durationString = () => {
+        const hours = Math.floor(trail.duration_mins / 60);
+        const mins = trail.duration_mins % 60;
+
+        if (trail.duration_mins < 60) {
+            return `${trail.duration_mins} min`;
+        }
+        if (trail.duration_mins !== 0 && mins === 0) {
+            return `${hours}h`;
+        }
+        return `${hours}h${mins}min`;
+    };
+
     if (trail.distance && loc.name) {
         distAreaString += `Enjoy this ${trail.distance} km trail near ${loc.name}, ${capitalise(
             loc.state,
@@ -33,7 +46,7 @@ function TrailSummary({ trail, loc }) {
     });
 
     // todo: fill in with expected time taken
-    timeString += `it takes an average of XhY min to complete. This is a very popular area for ${goodForString}, so you'll likely encounter other people.`;
+    timeString += `it takes an average of ${durationString()} to complete. This is a very popular area for ${goodForString}, so you'll likely encounter other people.`;
 
     summary += distAreaString + diffString + timeString;
 
