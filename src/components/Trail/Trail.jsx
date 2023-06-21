@@ -3,9 +3,10 @@ import { Link, useParams } from 'react-router-dom';
 import { useAppState } from '../../overmind';
 import { capitalise } from '../../utils/utils';
 import TrailTag from './TrailTag';
-import '../../styles/Trail/Trail.css';
 import TrailSummary from './TrailSummary';
 import TrailStats from './TrailStats';
+import Map from '../Map';
+import '../../styles/Trail/Trail.css';
 
 function Trail() {
     const { id } = useParams();
@@ -76,6 +77,8 @@ function Trail() {
                                     'Lorem ipsum odor amet, consectetuer adipiscing elit. Vel velit nec praesent viverra himenaeos vulputate accumsan placerat duis. Aenean volutpat pharetra congue nascetur sociosqu. Turpis hac enim curabitur sollicitudin elit lobortis pharetra iaculis mus. Scelerisque turpis justo molestie integer nulla nostra. Elementum nisi nulla gravida lectus purus at mauris mollis. Habitant id class vitae pulvinar dapibus velit est facilisi. Egestas taciti vestibulum; quis vel nam est sociosqu venenatis. Facilisis rutrum pharetra etiam dictum habitant iaculis molestie. Nisl primis quis ullamcorper cursus mus dignissim felis habitant.'
                                 }
                             </div>
+                            <div className="trail-section-divider"></div>
+                            <Map />
                             <div className="trail-section-divider"></div>
                         </div>
                     </div>
