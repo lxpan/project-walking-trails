@@ -99,3 +99,12 @@
     font-size: 1.1rem;
     line-height: 26px;
 }
+
+.trail-description h3 {
+    padding: 0;
+}
+
+.trail-divider-post-heading {
+    margin-bottom: 20px;
+    ;
+}
