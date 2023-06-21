@@ -111,12 +111,12 @@ function Map() {
     });
 
     return (
-        <>
+        <div className="map-container">
             <div className="sidebar">
                 Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
             </div>
             <div ref={mapContainer} className="map-container" />
-        </>
+        </div>
     );
 }
 
