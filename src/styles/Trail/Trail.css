@@ -6,6 +6,11 @@
     background-color: #FAF9F6;
 }
 
+.trail-section-divider {
+    height: 0;
+    border-bottom: 1px solid #dbdad2;
+}
+
 .trail-breadcrumbs {
     font-size: 0.9rem;
     margin-top: 10px;
