@@ -5,6 +5,7 @@ import { capitalise } from '../../utils/utils';
 import TrailTag from './TrailTag';
 import '../../styles/Trail/Trail.css';
 import TrailSummary from './TrailSummary';
+import TrailStats from './TrailStats';
 
 function Trail() {
     const { id } = useParams();
@@ -64,24 +65,7 @@ function Trail() {
                             </span>
                         </div>
                         <div className="trail-info">
-                            <div className="trail-stats">
-                                <div className="trail-stats-column">
-                                    <span className="trail-stats-label">Distance</span>
-                                    <span className="trail-stats-value">{`${trail.distance} km`}</span>
-                                </div>
-                                <div className="trail-stats-column">
-                                    <span className="trail-stats-label">Elevation</span>
-                                    <span className="trail-stats-value">{`${trail.elevation_gain} m`}</span>
-                                </div>
-                                <div className="trail-stats-column">
-                                    <span className="trail-stats-label">Type</span>
-                                    <span className="trail-stats-value">
-                                        <span className="trail-stats-value">
-                                            {capitalise(trail.type)}
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
+                            <TrailStats trail={trail} />
                             <TrailSummary trail={trail} loc={loc} />
                             <div className="trail-section-divider"></div>
                             <TrailTag tags={trail.tags} />
