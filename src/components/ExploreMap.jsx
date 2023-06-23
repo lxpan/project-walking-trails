@@ -9,17 +9,8 @@ import '../styles/Map.css';
 mapboxgl.accessToken =
     'pk.eyJ1IjoibHBhbmRldiIsImEiOiJjbGdlZnFvNDEwdTF0M3JyeW5nNjF0bHg2In0.FeOaetmAXx5D4hb1A4e-hg';
 
-const palette = require('tailwindcss/colors'); // eslint-disable-line
-
-function ExploreMap() {
-    const COLOURS = [
-        palette.blue[500],
-        palette.indigo[500],
-        palette.orange[400],
-        palette.emerald[500],
-        palette.purple[500],
-        palette.red[500],
-    ];
+function ExploreMap(props) {
+    const COLOURS = props.colours;
     const { routes } = useAppState();
 
     const mapContainer = useRef(null);
