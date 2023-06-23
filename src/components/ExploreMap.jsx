@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import bbox from '@turf/bbox';
 import { useAppState } from '../overmind';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import MapCore from './MapCore';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../styles/Map.css';
 
@@ -10,7 +11,7 @@ mapboxgl.accessToken =
 
 const palette = require('tailwindcss/colors'); // eslint-disable-line
 
-function Map() {
+function ExploreMap() {
     const COLOURS = [
         palette.blue[500],
         palette.indigo[500],
@@ -120,4 +121,4 @@ function Map() {
     );
 }
 
-export default Map;
+export default MapCore(ExploreMap);
