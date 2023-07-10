@@ -10,27 +10,31 @@ mapboxgl.accessToken =
     'pk.eyJ1IjoibHBhbmRldiIsImEiOiJjbGdlZnFvNDEwdTF0M3JyeW5nNjF0bHg2In0.FeOaetmAXx5D4hb1A4e-hg';
 
 function ExploreMap(props) {
-    const COLOURS = props.colours;
+    console.log(props);
+    const { colours, mapCentre } = props;
     const { routes } = useAppState();
 
     const mapContainer = useRef(null);
     const map = useRef(null);
-    const [lng, setLng] = useState(143.9221);
-    const [lat, setLat] = useState(-37.655);
+    const [lng, setLng] = useState(null);
+    const [lat, setLat] = useState(null);
     const [zoom, setZoom] = useState(13.2);
 
     // initialise the map right after component load
     useEffect(() => {
         // console.log('routes state in Map component');
         // console.log(routes);
+
+        // function: initMap(map, style)
         if (map.current) return; // initialize map only once
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
             style: 'mapbox://styles/mapbox/outdoors-v11',
-            center: [lng, lat],
+            center: [mapCentre.lng, mapCentre.lat],
             zoom,
         });
 
+        // function: processEachRoute(map)
         map.current.on('load', () => {
             map.current.resize();
             routes.forEach((route) => {
@@ -51,7 +55,7 @@ function ExploreMap(props) {
                         'line-cap': 'round',
                     },
                     paint: {
-                        'line-color': COLOURS.shift(),
+                        'line-color': colours.shift(),
                         'line-width': 4,
                     },
                 });
@@ -112,4 +116,9 @@ function ExploreMap(props) {
     );
 }
 
-export default MapCore(ExploreMap);
+const _mapCentre = {
+    lng: 143.9221,
+    lat: -37.655,
+};
+
+export default MapCore(ExploreMap, _mapCentre);

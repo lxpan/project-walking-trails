@@ -12,10 +12,10 @@ const COLOURS = [
     palette.red[500],
 ];
 
-const MapCore = (OriginalComponent) => {
+const MapCore = (OriginalComponent, mapCentre) => {
     function NewComponent() {
         // render OriginalComponent and pass on its props.
-        return <OriginalComponent colours={COLOURS} />;
+        return <OriginalComponent colours={COLOURS} mapCentre={mapCentre} />;
     }
     return NewComponent;
 };
