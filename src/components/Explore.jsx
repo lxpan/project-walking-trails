@@ -1,5 +1,8 @@
 import React from 'react';
-import ExploreMap from './ExploreMap';
+import withExplore from './WithExplore';
+import MapCore from './MapCore';
+
+const ExploreMap = withExplore(MapCore);
 
 function Explore() {
     return (
