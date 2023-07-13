@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { clearConfigCache } from 'prettier';
 import { useAppState } from '../../overmind';
 import { capitalise } from '../../utils/utils';
 import TrailTag from './TrailTag';
@@ -32,8 +33,8 @@ function Trail() {
     }, [trail, locations]);
 
     if (!(trail && loc)) {
-        console.log(trail);
-        console.log(loc);
+        // console.log(trail);
+        // console.log(loc);
         // placeholder loading message
         return <h1 style={{ fontSize: 100 }}>Loading...</h1>;
     }
@@ -45,7 +46,8 @@ function Trail() {
         trailName: trail.name,
     };
 
-    const TrailMap = withTrail(MapCore);
+    console.log(id);
+    const TrailMap = withTrail(MapCore, id);
 
     return (
         <div className="Trail">

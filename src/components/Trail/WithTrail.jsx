@@ -21,12 +21,14 @@ const mapCentre = {
 
 // const route id = get from props or args
 
-const withTrail = (OriginalComponent) => {
+const withTrail = (OriginalComponent, id) => {
     function NewComponent() {
         const { routes } = useAppState();
         console.log(routes);
+        const trailRoute = routes.filter((route) => route.id === id);
+        console.log(trailRoute);
         // render OriginalComponent and pass on its props.
-        return <OriginalComponent routes={routes} colours={COLOURS} mapCentre={mapCentre} />;
+        return <OriginalComponent routes={trailRoute} colours={COLOURS} mapCentre={mapCentre} />;
     }
     return NewComponent;
 };

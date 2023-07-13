@@ -19,6 +19,7 @@ function MapCore(props) {
 
     // initialise the map right after component load
     useEffect(() => {
+        const displayRoute = routes[0];
         // console.log('routes state in Map component');
         // console.log(routes);
 
@@ -27,6 +28,10 @@ function MapCore(props) {
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
             style: 'mapbox://styles/mapbox/outdoors-v11',
+            bounds: bbox(displayRoute.geoJson),
+            fitBoundsOptions: {
+                padding: 20,
+            },
             center: [mapCentre.lat, mapCentre.lng],
             zoom,
         });
@@ -81,6 +86,7 @@ function MapCore(props) {
 
                 map.current.on('click', `${slug}-fill`, () => {
                     const bounds = bbox(route.geoJson);
+                    console.log(bounds);
 
                     // pan map to bounds
                     map.current.fitBounds(bounds, {
