@@ -6,6 +6,8 @@ import TrailTag from './TrailTag';
 import '../../styles/Trail/Trail.css';
 import TrailSummary from './TrailSummary';
 import TrailStats from './TrailStats';
+import MapCore from '../MapCore';
+import withTrail from './WithTrail';
 
 function Trail() {
     const { id } = useParams();
@@ -43,6 +45,8 @@ function Trail() {
         trailName: trail.name,
     };
 
+    const TrailMap = withTrail(MapCore);
+
     return (
         <div className="Trail">
             {trail && (
@@ -77,6 +81,7 @@ function Trail() {
                                 }
                             </div>
                             <div className="trail-section-divider"></div>
+                            <TrailMap />
                         </div>
                     </div>
                 </div>
