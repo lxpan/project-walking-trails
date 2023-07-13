@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import bbox from '@turf/bbox';
-import { useAppState } from '../overmind';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../styles/Map.css';
@@ -10,8 +9,7 @@ mapboxgl.accessToken =
 
 function MapCore(props) {
     console.log(props);
-    const { colours, mapCentre } = props;
-    const { routes } = useAppState();
+    const { routes, colours, mapCentre } = props;
 
     const mapContainer = useRef(null);
     const map = useRef(null);

@@ -1,7 +1,8 @@
 /* MapCore is a higher-order component (HOC) that contains the core Map functionality */
 import { React, useState } from 'react';
+import { useAppState } from '../overmind';
 
-const palette = require('tailwindcss/colors'); // eslint-disable-line
+const palette = require('tailwindcss/colors');
 
 const COLOURS = [
     palette.blue[500],
@@ -19,8 +20,10 @@ const mapCentre = {
 
 const withExplore = (OriginalComponent) => {
     function NewComponent() {
+        const { routes } = useAppState();
+        console.log(routes);
         // render OriginalComponent and pass on its props.
-        return <OriginalComponent colours={COLOURS} mapCentre={mapCentre} />;
+        return <OriginalComponent routes={routes} colours={COLOURS} mapCentre={mapCentre} />;
     }
     return NewComponent;
 };
