@@ -11,6 +11,7 @@ const COLOURS = [
     palette.emerald[500],
     palette.purple[500],
     palette.red[500],
+    palette.yellow[500],
 ];
 
 const mapCentre = {
