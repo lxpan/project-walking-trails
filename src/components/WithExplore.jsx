@@ -1,5 +1,5 @@
 /* MapCore is a higher-order component (HOC) that contains the core Map functionality */
-import { React, useState } from 'react';
+import { React } from 'react';
 import { useAppState } from '../overmind';
 
 const palette = require('tailwindcss/colors');
