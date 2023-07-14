@@ -8,7 +8,7 @@ mapboxgl.accessToken =
     'pk.eyJ1IjoibHBhbmRldiIsImEiOiJjbGdlZnFvNDEwdTF0M3JyeW5nNjF0bHg2In0.FeOaetmAXx5D4hb1A4e-hg';
 
 function MapCore(props) {
-    console.log(props);
+    // console.log(props);
     const { routes, colours, mapCentre } = props;
 
     const mapContainer = useRef(null);
@@ -19,9 +19,12 @@ function MapCore(props) {
 
     // initialise the map right after component load
     useEffect(() => {
-        const displayRoute = routes[0];
-        // console.log('routes state in Map component');
-        // console.log(routes);
+        /* display the Mt Buninyong trail by default when multiple trails are loaded
+        (e.g., for the Explore page), otherwise display the single trail */
+        const displayRoute =
+            routes.length > 1 ?
+                routes.filter((route) => route.id === 'mt-buninyong')[0] :
+                routes[0];
 
         // function: initMap(map, style)
         if (map.current) return; // initialize map only once
@@ -86,7 +89,7 @@ function MapCore(props) {
 
                 map.current.on('click', `${slug}-fill`, () => {
                     const bounds = bbox(route.geoJson);
-                    console.log(bounds);
+                    // console.log(bounds);
 
                     // pan map to bounds
                     map.current.fitBounds(bounds, {
