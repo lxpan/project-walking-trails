@@ -9,6 +9,7 @@ import TrailSummary from './TrailSummary';
 import TrailStats from './TrailStats';
 import MapCore from '../MapCore';
 import withTrail from './WithTrail';
+import Reviews from './Reviews';
 
 function Trail() {
     const { id } = useParams();
@@ -85,6 +86,7 @@ function Trail() {
                             <div className="trail-section-divider"></div>
                             <TrailMap />
                             <div className="trail-section-divider"></div>
+                            <Reviews />
                         </div>
                     </div>
                 </div>
