@@ -84,6 +84,7 @@ function Trail() {
                             </div>
                             <div className="trail-section-divider"></div>
                             <TrailMap />
+                            <div className="trail-section-divider"></div>
                         </div>
                     </div>
                 </div>
