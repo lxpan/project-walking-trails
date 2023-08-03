@@ -19,6 +19,7 @@ function Home() {
         // actions.trails.migrate();
         // actions.routes.migrate();
         // actions.locations.migrate();
+        // actions.reviews.migrate();
     }, []);
 
     if (loading) {

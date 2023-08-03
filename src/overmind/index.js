@@ -9,6 +9,7 @@ import state from './state';
 import * as trails from './trails';
 import * as routes from './routes';
 import * as locations from './locations';
+import * as reviews from './reviews';
 
 export const config = merge(
     {
@@ -18,6 +19,7 @@ export const config = merge(
         trails,
         routes,
         locations,
+        reviews,
     }),
 );
 
