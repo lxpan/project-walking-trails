@@ -60,18 +60,18 @@ export const api = (() => {
             const _collection = collection(db, 'reviews');
             const snapshot = await getDocs(_collection);
 
-            snapshot.docs.forEach((_doc) => {
-                deleteDoc(doc(_collection, _doc.id));
+            snapshot.docs.forEach(async (_doc) => {
+                await deleteDoc(doc(_collection, _doc.id));
             });
         },
         // uploads our seed trail objects from seed.js
-        migrateReviews() {
+        async migrateReviews() {
             // seedReviews.forEach((review) => {
             //     this.writeDocument(review.id, review);
             // });
 
-            Object.entries(seedReviews).forEach(([key, value]) => {
-                this.writeDocument(key, value);
+            Object.entries(seedReviews).forEach(async ([key, value]) => {
+                await this.writeDocument(key, value);
             });
         },
     };
