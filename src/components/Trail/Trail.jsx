@@ -13,17 +13,22 @@ import Reviews from './Reviews';
 
 function Trail() {
     const { id } = useParams();
-    const { trails, locations } = useAppState();
+    const { trails, locations, reviews } = useAppState();
 
     /* React state variables are used to enable conditional rendering since
     Overmind state variables don't load on time if the Trail page URL is accessed
     directly (as opposed to the normal flow of accessing the Trail's page through Home) */
     const [trail, setTrail] = useState();
     const [loc, setLoc] = useState();
+    const [review, setReview] = useState();
 
     useEffect(() => {
         setTrail(trails[id]);
     }, [trails]);
+
+    useEffect(() => {
+        setReview(reviews[id]);
+    }, [reviews]);
 
     /* This useEffect hook is called when either trail or locations is updated,
     ensuring that loc (which is dependent on trail) is set after trail has been set */
@@ -86,7 +91,7 @@ function Trail() {
                             <div className="trail-section-divider"></div>
                             <TrailMap />
                             <div className="trail-section-divider"></div>
-                            <Reviews />
+                            <Reviews reviews={review} />
                         </div>
                     </div>
                 </div>

@@ -2,3 +2,24 @@
     display: flex;
     flex-direction: column;
 }
+
+.trail-reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trail-review-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.trail-review-header {
+    display: flex;
+    gap: 15px;
+}
+
+.trail-review-header img {
+    max-width: 48px;
+    height: auto;
+}
