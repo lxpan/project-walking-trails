@@ -23,3 +23,13 @@
     max-width: 48px;
     height: auto;
 }
+
+.trail-review-user-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.trail-review-date {
+    font-size: .8rem;
+    color: gray;
+}

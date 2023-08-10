@@ -13,8 +13,10 @@ function Reviews({ reviews }) {
         <div key={index} className="trail-review-div">
             <div className="trail-review-header">
                 <img src={profilePic} alt="" />
-                <span>{review.username}</span>
-                <span>{review.date}</span>
+                <div className="trail-review-user-date">
+                    <span>{review.username}</span>
+                    <span className="trail-review-date">{review.date}</span>
+                </div>
             </div>
             <span>{review.rating}</span>
             <span>{review.comment}</span>
