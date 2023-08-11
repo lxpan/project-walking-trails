@@ -7,7 +7,7 @@ import reviewStarsPic from '../../assets/images/trail/star.png';
 
 function Reviews({ reviews }) {
     if (!reviews) {
-        return <h1 style={{ fontSize: 100 }}>Loading...</h1>;
+        return <h1 style={{ fontSize: 40 }}>Loading reviews...</h1>;
     }
 
     const renderRatingStars = (rating) => Array.from({ length: rating - 1 }, (_, i) => (
