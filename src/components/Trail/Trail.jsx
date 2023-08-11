@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { clearConfigCache } from 'prettier';
 import { useAppState } from '../../overmind';
 import { capitalise } from '../../utils/utils';
 import TrailTag from './TrailTag';
