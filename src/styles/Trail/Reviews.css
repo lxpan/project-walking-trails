@@ -33,3 +33,13 @@
     font-size: .8rem;
     color: gray;
 }
+
+.trail-review-rating-stars {
+    display: flex;
+    flex-direction: row;
+}
+
+.trail-review-rating-stars img {
+    max-width: 16px;
+    height: auto;
+}
