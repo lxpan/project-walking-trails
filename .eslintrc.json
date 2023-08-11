@@ -20,7 +20,8 @@
         "class-methods-use-this": ["error", { "exceptMethods": ["render"] }],
         "no-param-reassign": ["error", { "props": false }],
         "new-cap": ["error", { "newIsCapExceptions": ["jsPDF"] }],
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "max-len": ["error", { "code": 100 }]
     },
     "settings": {
         "react": {
