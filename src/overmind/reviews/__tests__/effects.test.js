@@ -50,4 +50,6 @@ describe('Api', () => {
         expect(Object.keys(reviews)).toContain('test-trail-route');
         console.log(Object.keys(reviews));
     });
+
+    test('should add 1 review to review document', () => undefined);
 });
