@@ -3,16 +3,26 @@ import ReviewStats from './ReviewStats';
 import '../../styles/Trail/Reviews.css';
 
 import profilePic from '../../assets/images/trail/account.png';
-import reviewStarsPic from '../../assets/images/trail/star.png';
+import reviewStarGold from '../../assets/images/trail/star.png';
+import reviewStarWhite from '../../assets/images/trail/starWhite.png';
 
 function Reviews({ reviews }) {
     if (!reviews) {
         return <h1 style={{ fontSize: 40 }}>Loading reviews...</h1>;
     }
 
-    const renderRatingStars = (rating) => Array.from({ length: rating - 1 }, (_, i) => (
-        <img key={i} src={reviewStarsPic} alt=""></img>
-    ));
+    const maxReviewRating = 5;
+    // iteratively add stars equal to rating, then fill to max with 'blank' stars
+    const renderRatingStars = (rating) => Array.from(
+        {
+            length: maxReviewRating,
+        },
+        (_, i) => (i < rating - 1 ? (
+            <img key={i} src={reviewStarGold} alt=""></img>
+        ) : (
+            <img key={i} src={reviewStarWhite} alt=""></img>
+        )),
+    );
 
     const reviewsMap = Object.values(reviews).map((review, index) => (
         <div key={index} className="trail-review-div">
