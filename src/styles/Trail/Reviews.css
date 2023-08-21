@@ -12,6 +12,7 @@
 .trail-review-div {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .trail-review-header {
