@@ -67,548 +67,553 @@ const seedReviews = {
     ],
     'branding-yard-you-yangs': [
         {
-            username: 'NatureLover123',
+            username: 'Hiker123',
+            date: '2023-08-21',
             rating: 5,
             comment:
-                'Absolutely stunning trail! The views from the top are breathtaking. The trail is well-marked and offers a great workout. Highly recommended!',
+                'Absolutely stunning trail! The views from the top are breathtaking. A must-do for any hiker.',
         },
         {
-            username: 'AdventureSeeker',
+            username: 'OutdoorEnthusiast',
+            date: '2023-08-20',
             rating: 4,
             comment:
-                'Enjoyed the hike on the Branding Yard trail. The scenery was beautiful, and the trail was moderately challenging. Good for both beginners and experienced hikers.',
+                'Great trail with a mix of challenging and easy sections. Loved the variety of landscapes.',
         },
         {
-            username: 'HikeEnthusiast',
+            username: 'NatureLover22',
+            date: '2023-08-19',
             rating: 5,
             comment:
-                'One of my favorite trails in the You Yangs National Park. The diverse landscapes and wildlife sightings make it a memorable experience. Will definitely hike here again!',
+                'I\'m in love with the You Yangs, and the Branding Yard trail just adds to the charm. Splendid hike!',
         },
         {
-            username: 'OutdoorExplorer',
+            username: 'TrailBlazerX',
+            date: '2023-08-18',
             rating: 3,
             comment:
-                'The trail itself was nice, but the signage could be improved. I got lost a couple of times. The views were worth it though!',
+                'The trail was nice, but the signage could be improved. Got a bit lost at times.',
         },
         {
-            username: 'FitnessJunkie',
+            username: 'AdventurousSoul',
+            date: '2023-08-17',
             rating: 5,
             comment:
-                'A great workout with stunning views. The uphill sections get the heart pumping, and the downhill stretches are a nice reward. Loved it!',
+                'Hiking the Branding Yard trail was an adventure like no other. Fantastic views and well-maintained paths!',
         },
         {
-            username: 'ScenicAdventures',
+            username: 'ScenicSeeker',
+            date: '2023-08-16',
             rating: 4,
             comment:
-                'The Branding Yard trail offers a good mix of uphill and downhill sections. The panoramic views from the top are Instagram-worthy. Enjoyed the hike overall.',
+                'Enjoyable hike, especially loved the panoramic vistas. Could use more resting spots along the way.',
+        },
+        {
+            username: 'MountainWanderer',
+            date: '2023-08-15',
+            rating: 5,
+            comment:
+                'A gem of a trail! The diversity of flora and fauna is astounding. Will definitely come back.',
+        },
+        {
+            username: 'HikePhotographer',
+            date: '2023-08-14',
+            rating: 4,
+            comment:
+                'Brought my camera along, and the photo opportunities were incredible. Lost a star due to some muddy sections.',
+        },
+        {
+            username: 'FitAndFueled',
+            date: '2023-08-13',
+            rating: 5,
+            comment:
+                'A challenging hike that\'s worth every step. The elevation gain gives a sense of accomplishment!',
+        },
+        {
+            username: 'SereneWanderer',
+            date: '2023-08-12',
+            rating: 4,
+            comment:
+                'Peaceful and serene. The trail offers a nice escape from the city hustle. A great spot for meditation.',
+        },
+        {
+            username: 'TrailRunner2000',
+            date: '2023-08-11',
+            rating: 3,
+            comment:
+                'Trail was more suitable for hiking than running due to uneven terrain. Decent workout though!',
+        },
+        {
+            username: 'NaturePainter',
+            date: '2023-08-10',
+            rating: 5,
+            comment:
+                'As an artist, I found inspiration around every corner. The changing landscapes are like a living canvas.',
+        },
+        {
+            username: 'WeekendExplorer',
+            date: '2023-08-09',
+            rating: 4,
+            comment:
+                'A perfect weekend adventure. The only downside was the lack of clear markers in some areas.',
+        },
+        {
+            username: 'NomadicTrekker',
+            date: '2023-08-08',
+            rating: 5,
+            comment:
+                'Truly an off-the-beaten-path experience. The solitude of the trail adds to its allure.',
+        },
+        {
+            username: 'FamilyHikers',
+            date: '2023-08-07',
+            rating: 4,
+            comment:
+                'Took our kids along and they had a blast. Some steep sections were challenging for them, but they persevered!',
+        },
+        {
+            username: 'SunsetChaser',
+            date: '2023-08-06',
+            rating: 5,
+            comment:
+                'The Branding Yard trail during sunset is like a scene from a fairy tale. The colors are simply magical.',
+        },
+        {
+            username: 'SoloAdventurer',
+            date: '2023-08-05',
+            rating: 4,
+            comment:
+                'Embarked on this solo journey and had a wonderful time. Met some friendly fellow hikers along the way.',
         },
         {
             username: 'WildlifeObserver',
+            date: '2023-08-04',
             rating: 5,
             comment:
-                'Hiking this trail feels like stepping into nature\'s playground. Saw kangaroos and various bird species. The tranquility and fresh air are rejuvenating.',
+                'Wildlife enthusiasts, rejoice! Saw kangaroos, colorful birds, and even a shy echidna on this trail.',
         },
         {
-            username: 'MountainGoer',
+            username: 'MountainGoat',
+            date: '2023-08-03',
             rating: 4,
             comment:
-                'A solid hike with rewarding views at the summit. The trail was well-maintained, and the elevation gain was manageable. Good for a half-day adventure.',
-        },
-        {
-            username: 'TrailRunnerX',
-            rating: 5,
-            comment:
-                'Decided to run this trail, and it was a fantastic experience. The changing terrain kept things interesting, and the views motivated me to keep going!',
-        },
-        {
-            username: 'SoloTraveler',
-            rating: 4,
-            comment:
-                'As a solo hiker, I felt safe on this trail. The well-defined path and occasional markers eased navigation. The vistas were a great reward for the effort.',
-        },
-        {
-            username: 'GroupHikers',
-            rating: 5,
-            comment:
-                'Hiked the Branding Yard trail with my friends, and we had a blast! Challenging enough to keep us engaged, and the scenery was a treat for the eyes.',
-        },
-        {
-            username: 'PhotographyBuff',
-            rating: 5,
-            comment:
-                'An excellent trail for photography enthusiasts. The changing landscapes provide numerous opportunities for capturing stunning shots.',
-        },
-        {
-            username: 'QuietEscape',
-            rating: 4,
-            comment:
-                'Found solitude and peace while hiking here. The trail was not too crowded, and the natural beauty was a wonderful escape from city life.',
-        },
-        {
-            username: 'AdventurePhotog',
-            rating: 5,
-            comment:
-                'Combine adventure and photography on the Branding Yard trail. I got some amazing shots of the landscapes and local wildlife.',
-        },
-        {
-            username: 'FitnessFam',
-            rating: 4,
-            comment:
-                'A family-friendly hike that challenged both adults and kids. The views were great motivation for the little ones to reach the top.',
-        },
-        {
-            username: 'TrailBlazer',
-            rating: 5,
-            comment:
-                'Explored the Branding Yard trail and loved every moment. The trail offers a mix of uphill and flat sections, making it suitable for various fitness levels.',
-        },
-        {
-            username: 'HikingNewbie',
-            rating: 4,
-            comment:
-                'My first real hike, and I\'m glad I chose the Branding Yard trail. The sense of accomplishment at the summit was incredible!',
-        },
-        {
-            username: 'NaturePhotography',
-            rating: 5,
-            comment:
-                'A paradise for nature photographers. The trail\'s flora and fauna provide endless subjects for capturing the beauty of the You Yangs.',
-        },
-        {
-            username: 'WeekendAdventurer',
-            rating: 4,
-            comment:
-                'An ideal weekend adventure. The trail is not too long but offers enough challenge and scenery to make it a satisfying experience.',
-        },
-        {
-            username: 'SereneHikes',
-            rating: 5,
-            comment:
-                'The tranquility of the Branding Yard trail is unparalleled. The sounds of nature and the breathtaking views create a serene hiking experience.',
-        },
-        {
-            username: 'MountainViews',
-            rating: 4,
-            comment:
-                'Impressive panoramic views from the top of the trail. A moderately strenuous hike that\'s worth the effort for the breathtaking vistas.',
-        },
-        {
-            username: 'FitnessAdapt',
-            rating: 5,
-            comment:
-                'A versatile trail that can be adapted for various fitness levels. Whether you\'re looking for a challenge or a leisurely hike, this trail delivers.',
-        },
-        {
-            username: 'NatureEscape',
-            rating: 4,
-            comment:
-                'Escaping into nature was exactly what I needed, and the Branding Yard trail provided just that. A perfect blend of exercise and relaxation.',
+                'The uphill sections provided a great workout. Views from the summit made the effort worthwhile.',
         },
         {
             username: 'AdventureCouples',
+            date: '2023-08-02',
             rating: 5,
             comment:
-                'Couples looking for adventure will enjoy this trail. It offers moments of bonding, stunning views, and a sense of accomplishment.',
+                'Romantic hike with my partner. The trail\'s beauty matched our happiness. A memory we\'ll cherish.',
         },
         {
-            username: 'WeekdayHiker',
+            username: 'SeasonedHiker',
+            date: '2023-08-01',
             rating: 4,
             comment:
-                'Hiked the trail on a weekday, and it was pleasantly uncrowded. The changing scenery and occasional wildlife sightings made it a memorable escape.',
-        },
-        {
-            username: 'SummitDreams',
-            rating: 5,
-            comment:
-                'Dreamt of reaching the summit? The Branding Yard trail can make that dream a reality. The feeling of accomplishment up there is indescribable.',
-        },
-        {
-            username: 'TrailWanderlust',
-            rating: 4,
-            comment:
-                'Satisfy your wanderlust on this trail. The variety of landscapes and the sense of exploration make it a must-hike for avid adventurers.',
-        },
-        {
-            username: 'NatureArtistry',
-            rating: 5,
-            comment:
-                'Nature\'s artistry is on full display along the Branding Yard trail. From rugged terrains to serene meadows, each step is a new masterpiece.',
-        },
-        {
-            username: 'FitnessChallenge',
-            rating: 4,
-            comment:
-                'Looking for a fitness challenge? This trail will push your limits. The inclines are tough but worth it for the sense of achievement.',
-        },
-        {
-            username: 'TrailMagic',
-            rating: 5,
-            comment:
-                'There\'s a touch of magic on the Branding Yard trail. The sense of connection with nature and the joy of exploration are truly magical.',
-        },
-        {
-            username: 'ScenicSunsets',
-            rating: 4,
-            comment:
-                'Catch breathtaking sunsets from the trail\'s vantage points. The changing colors of the sky against the natural backdrop are a sight to behold.',
-        },
-        {
-            username: 'AdventureUnbound',
-            rating: 5,
-            comment:
-                'Unleash your adventurous spirit on the Branding Yard trail. The trail rewards courage with stunning vistas and a memorable journey.',
+                'Been hiking for years, and the Branding Yard trail surprised me with its unique terrain. A good challenge!',
         },
     ],
     'cosgrove-reservoir-loop': [
         {
             username: 'NatureLover123',
+            date: '2023-08-21',
             rating: 5,
             comment:
-                'The Cosgrove Reservoir Loop trail is a hidden gem! The views of the reservoir and surrounding nature are absolutely stunning.',
+                'Absolutely breathtaking trail! The scenery around Cosgrove Reservoir is stunning, and the loop offers a great mix of challenging and easy sections.',
         },
         {
-            username: 'AdventureSeeker',
+            username: 'AdventureSeeker22',
+            date: '2023-08-19',
             rating: 4,
             comment:
-                'A moderate-level hike with beautiful scenery throughout. The reservoir adds a unique touch to the overall experience.',
+                'Had a fantastic time on the Cosgrove Reservoir Loop. The trail was well-marked, and the views from the top were worth the climb.',
         },
         {
-            username: 'TrailBlazer',
+            username: 'HikeAndRelax',
+            date: '2023-08-18',
             rating: 5,
             comment:
-                'I\'ve hiked this trail in different seasons, and each time, it amazes me with its tranquil ambiance and picturesque landscapes.',
+                'A serene and peaceful hike. The trail is surrounded by lush greenery, and the reservoir adds a calming touch to the experience.',
         },
         {
-            username: 'MountainMama',
+            username: 'MountainDreams',
+            date: '2023-08-16',
+            rating: 4,
+            comment:
+                'Cosgrove Reservoir Loop offers a good workout with its elevation changes. The trail was well-maintained, and the panoramic views were worth the effort.',
+        },
+        {
+            username: 'TrailBlazer55',
+            date: '2023-08-14',
             rating: 3,
             comment:
-                'The trail is a bit uneven at places, so be prepared for some rocky sections. The reservoir\'s beauty makes it worth the effort.',
+                'The trail was nice, but it got a bit crowded during the weekend. The scenery is lovely, but I prefer more secluded hikes.',
         },
         {
-            username: 'ScenicViewFinder',
+            username: 'NaturePhotography',
+            date: '2023-08-12',
             rating: 5,
             comment:
-                'The panoramic views from certain points along the trail are breathtaking. A must-visit spot for photographers and nature enthusiasts.',
+                'Brought my camera along and captured some stunning shots of the reservoir and the surrounding landscape. A photographer\'s paradise!',
         },
         {
-            username: 'WanderlustExplorer',
+            username: 'OutdoorEnthusiast99',
+            date: '2023-08-10',
             rating: 4,
             comment:
-                'A peaceful hike that offers a mix of shaded paths and open areas. The loop format keeps things interesting from start to finish.',
+                'Enjoyed the variety of terrain on the Cosgrove Reservoir Loop. From woods to open areas and water views, it\'s a well-rounded hiking experience.',
         },
         {
-            username: 'FitnessFreak',
+            username: 'PeacefulHiker',
+            date: '2023-08-08',
             rating: 5,
             comment:
-                'If you\'re into fitness, this trail provides a great workout. The elevation changes keep your heart rate up, and the scenery is a bonus.',
+                'Found true tranquility on this trail. Away from the city noise, the Cosgrove Reservoir Loop provided a much-needed escape into nature.',
         },
         {
-            username: 'HikingNewbie',
+            username: 'FitnessJunkie123',
+            date: '2023-08-06',
+            rating: 3,
+            comment:
+                'The trail was decent, but I expected a bit more challenge. Good for a leisurely hike, but not if you\'re looking for an intense workout.',
+        },
+        {
+            username: 'WanderlustTraveler',
+            date: '2023-08-04',
             rating: 4,
             comment:
-                'As a beginner, I found this trail manageable and rewarding. The reservoir\'s reflection on a calm day is truly mesmerizing.',
+                'Creswick\'s Cosgrove Reservoir Loop is a hidden gem. The trail offers a mix of nature and history, with remnants of old structures along the way.',
         },
         {
-            username: 'PhotographyEnthusiast',
+            username: 'FamilyAdventures',
+            date: '2023-08-02',
             rating: 5,
             comment:
-                'I\'ve captured some incredible shots of wildlife and landscapes during my hikes here. The Cosgrove Reservoir adds a magical touch.',
+                'A wonderful trail for families! Our kids had a blast exploring the trail and spotting wildlife near the reservoir.',
         },
         {
-            username: 'RelaxationSeeker',
+            username: 'SoloWanderer',
+            date: '2023-07-31',
+            rating: 5,
+            comment:
+                'As a solo traveler, I felt safe and invigorated on this trail. The views were inspiring, and I had a great sense of accomplishment after completing it.',
+        },
+        {
+            username: 'GreenThumbHiker',
+            date: '2023-07-29',
+            rating: 5,
+            comment:
+                'The flora and fauna along the Cosgrove Reservoir Loop are captivating. I appreciated the well-preserved natural beauty of the area.',
+        },
+        {
+            username: 'MountainViewsOnly',
+            date: '2023-07-27',
             rating: 4,
             comment:
-                'This trail is my go-to for relaxation. It offers a peaceful retreat where I can disconnect from the world and enjoy nature\'s beauty.',
+                'Solid hike with rewarding vistas. The trail\'s elevation changes provide a decent challenge, and the reservoir panoramas are stunning.',
         },
         {
-            username: 'OutdoorAdmirer',
-            rating: 5,
-            comment:
-                'I\'ve explored many trails, but the Cosgrove Reservoir Loop\'s serenity and well-maintained paths make it a favorite destination.',
-        },
-        {
-            username: 'TrailPhotographer',
+            username: 'AdventureAwaits',
+            date: '2023-07-25',
             rating: 4,
             comment:
-                'The changing colors of the foliage make this trail a perfect autumn adventure. The loop design ensures you don\'t miss any view.',
+                'Cosgrove Reservoir Loop was a great weekend adventure. The trail is enjoyable, and the cool breeze from the water was a refreshing bonus.',
         },
         {
-            username: 'SoloHiker',
-            rating: 5,
+            username: 'HistoryExplorer',
+            date: '2023-07-23',
+            rating: 3,
             comment:
-                'Solo hiking here is therapeutic. The trail\'s gentle flow and the reservoir\'s calming presence create a rejuvenating experience.',
-        },
-        {
-            username: 'WeekendExplorer',
-            rating: 4,
-            comment:
-                'For a quick weekend escape, the Cosgrove Reservoir Loop is a wonderful choice. Accessible, yet it transports you to a different world.',
-        },
-        {
-            username: 'PeacefulAdventurer',
-            rating: 5,
-            comment:
-                'Tranquility at its best! This trail offers a serene journey, with the reservoir\'s still waters reflecting the peaceful surroundings.',
+                'The historical markers along the trail were interesting, but I wish there were more of them. The scenery was pleasant, though.',
         },
     ],
     'creswick-circuit-walk': [
         {
-            username: 'NatureExplorer',
-            rating: 5,
-            comment:
-                'The Creswick Circuit Walk was a delightful journey through diverse landscapes. The peaceful ambiance and well-marked trails made it a memorable experience.',
-        },
-        {
-            username: 'AdventureHiker',
+            username: 'Hiker123',
+            date: '2023-08-20',
             rating: 4,
             comment:
-                'A well-maintained trail with a good mix of easy and moderate sections. The lush forests and serene lakes along the way were truly enchanting.',
+                'Enjoyed a refreshing hike on the Creswick Circuit Walk. The lush greenery and scenic views were a delight.',
         },
         {
-            username: 'TrailRoamer',
+            username: 'NatureLover22',
+            date: '2023-08-19',
             rating: 5,
             comment:
-                'I\'ve hiked many trails, but the Creswick Circuit Walk\'s tranquility and scenic beauty left me awestruck. A hidden gem for nature lovers.',
+                'Absolutely breathtaking! The Creswick Circuit Walk offers a perfect blend of nature and tranquility. A must-visit for all hikers.',
         },
         {
-            username: 'OutdoorEnthusiast',
+            username: 'AdventureSeeker',
+            date: '2023-08-18',
+            rating: 4,
+            comment:
+                'Had a great time exploring the Creswick Circuit Walk. The trail is well-maintained and the sights along the way are worth every step.',
+        },
+        {
+            username: 'OutdoorsyNomad',
+            date: '2023-08-17',
+            rating: 5,
+            comment:
+                'One of the best hiking experiences I\'ve had! The Creswick Circuit Walk offers diverse landscapes and a sense of serenity.',
+        },
+        {
+            username: 'TrailBlazer99',
+            date: '2023-08-16',
             rating: 3,
             comment:
-                'The trail was picturesque, but there were some muddy patches due to recent rains. Proper footwear is a must for an enjoyable experience.',
+                'The Creswick Circuit Walk is beautiful, but some sections were a bit challenging. Still, the overall experience was rewarding.',
         },
         {
-            username: 'ScenicAdventures',
+            username: 'WanderlustSpirit',
+            date: '2023-08-15',
             rating: 5,
             comment:
-                'Breathtaking views at every turn! The Creswick Circuit Walk exceeded my expectations and provided a refreshing escape from the urban hustle.',
+                'Immersed in nature\'s embrace on the Creswick Circuit Walk. Every turn reveals a new captivating scene. Truly rejuvenating!',
         },
         {
-            username: 'Wanderer',
+            username: 'FitnessFanatic',
+            date: '2023-08-14',
             rating: 4,
             comment:
-                'An easy-to-follow trail that meanders through stunning landscapes. The informative signs about local flora and fauna were a nice touch.',
+                'A well-marked trail with a mix of elevations. The Creswick Circuit Walk provided an excellent workout and stunning vistas.',
         },
         {
-            username: 'FitnessExplorer',
+            username: 'PhotographerGuy',
+            date: '2023-08-13',
             rating: 5,
             comment:
-                'For those seeking both a workout and a nature retreat, the Creswick Circuit Walk offers the best of both worlds. Highly recommended!',
+                'Photographer\'s paradise! The Creswick Circuit Walk presents countless photo opportunities amid its natural wonders.',
         },
         {
-            username: 'FirstTimeHiker',
+            username: 'SereneHiker',
+            date: '2023-08-12',
             rating: 4,
             comment:
-                'As a beginner, I found the Creswick Circuit Walk manageable yet invigorating. The sense of accomplishment upon completing it was fulfilling.',
+                'Found tranquility in every step on the Creswick Circuit Walk. A serene escape from the hustle and bustle of daily life.',
         },
         {
-            username: 'PhotoWanderer',
-            rating: 5,
-            comment:
-                'Scenic vistas at every corner! I captured some of my most stunning landscape photographs during the Creswick Circuit Walk.',
-        },
-        {
-            username: 'RelaxationAdmirer',
+            username: 'FamilyAdventures',
+            date: '2023-08-11',
             rating: 4,
             comment:
-                'This trail strikes a perfect balance between challenge and relaxation. The serene atmosphere and gentle sounds of nature were incredibly soothing.',
+                'A delightful trail for families! The Creswick Circuit Walk offered both easy paths and captivating sights for the kids.',
         },
     ],
     'goldfields-track-oak-gully-road-and-park-lake': [
         {
             username: 'Hiker123',
+            date: '2023-08-21',
             rating: 5,
             comment:
-                'The Goldfields Track offers a diverse range of landscapes and historical sites. Truly a gem for nature and history enthusiasts.',
+                'What a fantastic trail! The mix of lush greenery, serene lakes, and the Goldfields history along the way made this hike truly memorable.',
         },
         {
-            username: 'TrailExplorer',
+            username: 'NatureExplorer',
+            date: '2023-08-20',
             rating: 4,
             comment:
-                'The Oak Gully Road trail was a bit challenging but worth it for the stunning views. A great workout surrounded by nature.',
+                'Enjoyed the trail overall. The scenery was breathtaking, especially around Oak Gully Road. Some parts were a bit challenging, but the views were worth it.',
         },
         {
-            username: 'NaturePhotog',
+            username: 'TrailBlazer22',
+            date: '2023-08-19',
             rating: 5,
             comment:
-                'Captured some breathtaking shots along the Park Lake Loop. The tranquil lake and lush surroundings make it a photographer\'s paradise.',
+                'A hidden gem! The trail was well-marked, and the elevation changes kept things interesting. Park Lake Loop was a peaceful oasis. Highly recommended.',
+        },
+        {
+            username: 'OutdoorEnthusiast',
+            date: '2023-08-18',
+            rating: 4,
+            comment:
+                'Great trail for a day hike. The historical markers along Goldfields Track added an educational aspect. The trail was a good mix of challenging and easy sections.',
+        },
+        {
+            username: 'Wanderlust2023',
+            date: '2023-08-17',
+            rating: 5,
+            comment:
+                'Spent a lovely day on this trail. The variety of landscapes, from forests to open fields, kept the hike exciting. I\'ll definitely be back!',
         },
         {
             username: 'AdventureSeeker',
+            date: '2023-08-16',
             rating: 3,
             comment:
-                'The Goldfields Track was longer than expected, and some sections were quite rough. Make sure to plan accordingly and pack enough supplies.',
+                'The trail was beautiful, but some parts were quite muddy. It would be helpful if there were more signs to guide hikers, especially at intersections.',
         },
         {
-            username: 'ScenicViewFinder',
+            username: 'HikePhotographer',
+            date: '2023-08-15',
             rating: 5,
             comment:
-                'The Oak Gully Road trail is a hidden gem. The panoramic views from the ridge were awe-inspiring, especially during sunset.',
+                'Brought my camera along, and I\'m glad I did! The scenery was picturesque, and the reflections in Park Lake made for some stunning shots.',
+        },
+        {
+            username: 'QuietAdventures',
+            date: '2023-08-14',
+            rating: 4,
+            comment:
+                'Peaceful and rejuvenating hike. Oak Gully Road was a highlight with its shaded path. A great way to escape the city for a day.',
+        },
+        {
+            username: 'TrailRunner2000',
+            date: '2023-08-13',
+            rating: 4,
+            comment:
+                'Chose to run this trail, and it was a good challenge! The changing terrain kept me engaged. Park Lake Loop provided a nice cooldown.',
         },
         {
             username: 'LocalExplorer',
-            rating: 4,
-            comment:
-                'I\'ve lived nearby for years, and the Park Lake Loop remains a favorite for peaceful walks and birdwatching. A great escape from the city.',
-        },
-        {
-            username: 'FitnessEnthusiast',
+            date: '2023-08-12',
             rating: 5,
             comment:
-                'Challenging ascents and descents on the Goldfields Track tested my limits. Perfect for those seeking a demanding hiking workout.',
-        },
-        {
-            username: 'TrailRookie',
-            rating: 4,
-            comment:
-                'First time tackling the Oak Gully Road trail, and it was an adventure! A mix of forest paths and rocky trails kept things interesting.',
-        },
-        {
-            username: 'LakeLover',
-            rating: 5,
-            comment:
-                'The serenity of Park Lake Loop is unmatched. The reflection of the trees on the water creates a soothing and picturesque atmosphere.',
-        },
-        {
-            username: 'RelaxationSeeker',
-            rating: 4,
-            comment:
-                'The Goldfields Track provided a blend of challenge and relaxation. Some sections were tough, but the sense of accomplishment was worth it.',
+                'As a local, I can\'t believe it took me this long to discover the beauty of this trail. A true hidden treasure with a perfect blend of nature and history.',
         },
     ],
     'mt-buninyong': [
         {
-            username: 'NatureAdmirer',
+            username: 'NatureLover87',
+            date: '2023-08-15',
             rating: 5,
             comment:
-                'A fantastic hike with stunning vistas at every turn. The Mount Buninyong Summit Loop offers a perfect blend of challenge and natural beauty.',
+                'Absolutely breathtaking views from the summit! The trail was well-marked and the experience was invigorating.',
         },
         {
-            username: 'AdventureEnthusiast',
+            username: 'HikingEnthusiast22',
+            date: '2023-07-29',
             rating: 4,
             comment:
-                'The trail was well-marked and the views from the summit were absolutely worth the effort. A solid choice for a day of outdoor adventure.',
+                'A great hike with a variety of terrain. The climb was challenging but worth it for the panoramic vistas.',
         },
         {
-            username: 'ScenicSeeker',
+            username: 'AdventureSeeker99',
+            date: '2023-06-18',
             rating: 5,
             comment:
-                'I\'ve hiked many trails, but the Mount Buninyong Summit Loop\'s landscapes and diverse flora truly set it apart. An enriching experience overall.',
+                'The trail provided a mix of lush forests and open spaces. I enjoyed the solitude and serenity of this hike.',
         },
         {
-            username: 'MountainHiker123',
-            rating: 3,
-            comment:
-                'While the summit views were breathtaking, I found some parts of the trail to be quite steep and challenging. Not recommended for beginners.',
-        },
-        {
-            username: 'PanoramaLover',
+            username: 'MountainDreamer',
+            date: '2023-05-02',
             rating: 5,
             comment:
-                'The panoramic vistas from the Mount Buninyong Summit are awe-inspiring. This trail is a hidden gem for photography enthusiasts like me.',
+                'Unforgettable sunrise hike! The colors over the landscape were like something out of a painting.',
         },
         {
-            username: 'TrailExplorer99',
+            username: 'TrailBlazer55',
+            date: '2023-04-12',
             rating: 4,
             comment:
-                'A well-maintained trail that offers a great workout and moments of solitude. The changing landscapes make it an engaging hike.',
+                'Took my time on this trail and appreciated the flora and fauna. The trail was well-maintained.',
         },
         {
-            username: 'FitnessJunkie',
+            username: 'OutdoorExplorer123',
+            date: '2023-03-25',
             rating: 5,
             comment:
-                'If you\'re looking for a challenging yet rewarding hike, the Mount Buninyong Summit Loop won\'t disappoint. Prepare to be amazed by the views.',
+                'A must-do hike for any nature lover. The trail was challenging enough to keep it interesting.',
         },
         {
-            username: 'FirstTimeHiker',
+            username: 'ScenicViewFinder',
+            date: '2023-02-08',
             rating: 4,
             comment:
-                'My first solo hike, and it was worth it! The feeling of accomplishment when I reached the summit was incredible.',
+                'The views were amazing, but parts of the trail were a bit steep. Still, the effort was worth the reward.',
         },
         {
-            username: 'PhotoCapture',
+            username: 'FitnessJunkie456',
+            date: '2023-01-14',
             rating: 5,
             comment:
-                'The trail\'s natural beauty is a photographer\'s dream. I captured some of my best shots of flora and fauna during this hike.',
+                'An exhilarating workout with stunning panoramic rewards at the top. Loved every minute of it!',
         },
         {
-            username: 'RelaxationSeeker',
+            username: 'PeacefulHiker789',
+            date: '2022-12-03',
+            rating: 5,
+            comment:
+                'Found solace in the quiet beauty of this trail. The journey to the summit was as fulfilling as the destination.',
+        },
+        {
+            username: 'PhotographyHike',
+            date: '2022-11-19',
             rating: 4,
             comment:
-                'A rejuvenating hike that offers both challenges and moments of tranquility. The peaceful surroundings make it an ideal escape.',
+                'Captured some amazing shots along the way. The changing landscapes made this hike a photographer\'s dream.',
         },
     ],
     'yarrowee-river-south': [
         {
-            username: 'NatureExplorer',
+            username: 'NatureExplorer123',
+            date: '2023-08-21',
             rating: 5,
             comment:
-                'The Yarrowee River South trail is a hidden gem! The scenic beauty and peaceful ambiance make it a perfect getaway.',
+                'What a hidden gem! The Yarrowee River South Trail offers a perfect blend of tranquility and adventure. The lush surroundings and the serene river make this hike a must-do for nature enthusiasts.',
         },
         {
-            username: 'TrailAdventurer',
+            username: 'HikingFanatic456',
+            date: '2023-08-18',
             rating: 4,
             comment:
-                'A lovely trail with a mix of terrain. The river views and lush greenery create a refreshing atmosphere.',
+                'Had a fantastic time on this trail! The picturesque landscapes and well-maintained path made the hike enjoyable. The only reason I\'m not giving it a 5 is because some parts were a bit challenging.',
         },
         {
-            username: 'OutdoorEnthusiast',
+            username: 'OutdoorAdventurer789',
+            date: '2023-08-15',
             rating: 5,
             comment:
-                'I\'ve hiked this trail in different seasons, and it\'s always a treat. The changing colors of nature never cease to amaze me.',
+                'Absolutely loved every moment on the Yarrowee River South Trail. The river views were breathtaking, and the peaceful ambiance was rejuvenating. Can\'t wait to come back here!',
         },
         {
-            username: 'HikePhotographer',
+            username: 'TrailBlazer321',
+            date: '2023-08-12',
+            rating: 3,
+            comment:
+                'The trail was nice overall, but the signage could be improved. Got a bit lost at a couple of points. The river views were lovely, though!',
+        },
+        {
+            username: 'NatureLover22',
+            date: '2023-08-09',
+            rating: 5,
+            comment:
+                'Spent a beautiful day exploring the Yarrowee River South Trail. The path was easy to navigate, and the sights along the river were breathtaking. Five stars from me!',
+        },
+        {
+            username: 'WanderlustTraveler',
+            date: '2023-08-07',
             rating: 4,
             comment:
-                'Captured some stunning shots of the river and its surroundings. The Yarrowee River South trail offers great photography opportunities.',
+                'A lovely trail with plenty of natural beauty to soak in. The walk was peaceful and serene, making it a great escape from the city. Would definitely recommend!',
         },
         {
-            username: 'FitnessJunkie',
+            username: 'AdventureSeeker55',
+            date: '2023-08-03',
             rating: 5,
             comment:
-                'This trail provides a good workout with its inclines and varied paths. Nature\'s beauty keeps me motivated throughout.',
+                'One of the best trails I\'ve hiked in a while! The Yarrowee River South Trail had a bit of everything – lush forests, meadows, and of course, the stunning river. I\'m already planning my next visit!',
         },
         {
-            username: 'TranquilEscape',
-            rating: 5,
-            comment:
-                'Whenever I need a peaceful retreat, I head to the Yarrowee River South trail. The sound of the flowing water is soothing.',
-        },
-        {
-            username: 'LocalExplorer',
+            username: 'HikeAndSnap',
+            date: '2023-07-30',
             rating: 4,
             comment:
-                'Lucky to have this trail nearby. It\'s an easy-going hike that\'s perfect for a quick nature fix after a busy day.',
+                'Took some amazing photos on this trail! The scenery was truly Instagram-worthy. The only reason I\'m not giving it a 5 is because there were a few spots that were a bit muddy.',
         },
         {
-            username: 'FamilyAdventures',
+            username: 'NaturePhotographer',
+            date: '2023-07-27',
             rating: 5,
             comment:
-                'A great trail for families! Our kids loved spotting wildlife and splashing around in the river.',
+                'As a photographer, I couldn\'t have asked for a better location. The Yarrowee River South Trail is a paradise for nature photographers. The changing landscapes kept me engaged throughout.',
         },
         {
-            username: 'SoloHiker',
-            rating: 4,
-            comment:
-                'I find solace in hiking alone, and the Yarrowee River South trail provides the ideal environment for self-reflection.',
-        },
-        {
-            username: 'ScenicViewsLover',
+            username: 'WeekendHiker22',
+            date: '2023-07-24',
             rating: 5,
             comment:
-                'The breathtaking panoramic views along the trail are simply mesmerizing. Every turn reveals a new vista to admire.',
-        },
-        {
-            username: 'AdventureSeeker123',
-            rating: 4,
-            comment:
-                'A well-marked trail that\'s suitable for all skill levels. It\'s an enjoyable way to spend a few hours in nature.',
-        },
-        {
-            username: 'WildlifeObserver',
-            rating: 5,
-            comment:
-                'The Yarrowee River South trail is a haven for wildlife enthusiasts. Keep your eyes peeled for native birds and animals.',
+                'Spent a wonderful day on this trail with my family. The kids had a blast exploring the surroundings, and my partner and I enjoyed the peaceful walk. This trail has something for everyone.',
         },
     ],
 };
