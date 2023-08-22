@@ -11,20 +11,22 @@ function Reviews({ reviews }) {
         return <h1 style={{ fontSize: 40 }}>Loading reviews...</h1>;
     }
 
-    console.log(reviews);
-
     const reviewStats = {
         ratings: Object.values(reviews).map((review) => review.rating),
-        num() {
+        length() {
             return this.ratings.length;
         },
-        mean() {
+        sum() {
             return this.ratings.reduce((accum, currentVal) => accum + currentVal, 0);
+        },
+        mean() {
+            return this.sum() / this.length();
         },
     };
 
-    console.log(reviewStats.ratings);
-    console.log(reviewStats.num());
+    // console.log(reviewStats.ratings);
+    console.log(reviewStats.length());
+    console.log(reviewStats.sum());
     console.log(reviewStats.mean());
 
     const maxReviewRating = 5;
@@ -63,7 +65,7 @@ function Reviews({ reviews }) {
             <h2>Review Component</h2>
             <div className="trail-review-stats">
                 <div>Histogram</div>
-                <div>Average Ratings In Stars</div>
+                <div>{`Average Rating: ${reviewStats.mean().toFixed(1)}`}</div>
             </div>
             <h2>User Reviews</h2>
             <div className="trail-reviews-container">{reviewsMap}</div>
