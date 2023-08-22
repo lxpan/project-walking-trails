@@ -11,19 +11,36 @@ function Reviews({ reviews }) {
         return <h1 style={{ fontSize: 40 }}>Loading reviews...</h1>;
     }
 
+    console.log(reviews);
+
+    const reviewStats = {
+        ratings: Object.values(reviews).map((review) => review.rating),
+        num() {
+            return this.ratings.length;
+        },
+        mean() {
+            return this.ratings.reduce((accum, currentVal) => accum + currentVal, 0);
+        },
+    };
+
+    console.log(reviewStats.ratings);
+    console.log(reviewStats.num());
+    console.log(reviewStats.mean());
+
     const maxReviewRating = 5;
     // iteratively add stars equal to rating, then fill to max with 'blank' stars
     const renderRatingStars = (rating) => Array.from(
         {
             length: maxReviewRating,
         },
-        (_, i) => (i < rating - 1 ? (
+        (_, i) => (i < rating ? (
             <img key={i} src={reviewStarGold} alt=""></img>
         ) : (
             <img key={i} src={reviewStarWhite} alt=""></img>
         )),
     );
 
+    // Map through reviews object and render each review as a user post
     const reviewsMap = Object.values(reviews).map((review, index) => (
         <div key={index} className="trail-review-div">
             <div className="trail-review-header">
@@ -44,7 +61,10 @@ function Reviews({ reviews }) {
     return (
         <div className="trail-reviews">
             <h2>Review Component</h2>
-            <ReviewStats />
+            <div className="trail-review-stats">
+                <div>Histogram</div>
+                <div>Average Ratings In Stars</div>
+            </div>
             <h2>User Reviews</h2>
             <div className="trail-reviews-container">{reviewsMap}</div>
         </div>
