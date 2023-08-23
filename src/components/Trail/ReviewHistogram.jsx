@@ -27,6 +27,9 @@ function ReviewHistogram({ ratings }) {
                     height: 120,
                     bargap: 0.5,
                 }}
+                config={{
+                    displayModeBar: false,
+                }}
             />
         </div>
     );
