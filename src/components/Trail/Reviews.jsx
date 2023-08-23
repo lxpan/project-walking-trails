@@ -25,9 +25,9 @@ function Reviews({ reviews }) {
     };
 
     // console.log(reviewStats.ratings);
-    console.log(reviewStats.length());
-    console.log(reviewStats.sum());
-    console.log(reviewStats.mean());
+    // console.log(reviewStats.length());
+    // console.log(reviewStats.sum());
+    // console.log(reviewStats.mean());
 
     const maxReviewRating = 5;
     // iteratively add stars equal to rating, then fill to max with 'blank' stars
@@ -64,7 +64,7 @@ function Reviews({ reviews }) {
         <div className="trail-reviews">
             <h2>Review Component</h2>
             <div className="trail-review-stats">
-                <ReviewHistogram />
+                <ReviewHistogram ratings={reviewStats.ratings} />
                 <div>{`Average Rating: ${reviewStats.mean().toFixed(1)}`}</div>
             </div>
             <h2>User Reviews</h2>
