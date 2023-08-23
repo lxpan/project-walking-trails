@@ -1,5 +1,5 @@
 import React from 'react';
-import ReviewStats from './ReviewStats';
+import ReviewHistogram from './ReviewHistogram';
 import '../../styles/Trail/Reviews.css';
 
 import profilePic from '../../assets/images/trail/account.png';
@@ -64,7 +64,7 @@ function Reviews({ reviews }) {
         <div className="trail-reviews">
             <h2>Review Component</h2>
             <div className="trail-review-stats">
-                <div>Histogram</div>
+                <ReviewHistogram />
                 <div>{`Average Rating: ${reviewStats.mean().toFixed(1)}`}</div>
             </div>
             <h2>User Reviews</h2>

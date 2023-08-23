@@ -5,7 +5,8 @@
 
 .trail-review-stats {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 100px;
 }
 
 .trail-reviews-container {
