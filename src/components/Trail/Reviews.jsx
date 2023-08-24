@@ -5,6 +5,7 @@ import '../../styles/Trail/Reviews.css';
 import profilePic from '../../assets/images/trail/account.png';
 import reviewStarGold from '../../assets/images/trail/star.png';
 import reviewStarWhite from '../../assets/images/trail/starWhite.png';
+import TrailStats from './TrailStats';
 
 function Reviews({ reviews }) {
     if (!reviews) {
@@ -65,7 +66,12 @@ function Reviews({ reviews }) {
             <h2>User reviews</h2>
             <div className="trail-review-stats">
                 <ReviewHistogram ratings={reviewStats.ratings} />
-                <div>{`Average Rating: ${reviewStats.mean().toFixed(1)}`}</div>
+                <div className="trail-review-stats-average-rating">
+                    {reviewStats.mean().toFixed(1)}
+                    <span className="trail-review-stats-average-size">
+                        {`${reviewStats.length()} reviews`}
+                    </span>
+                </div>
             </div>
             <div className="trail-section-divider" style={{ marginBottom: '20px' }}></div>
             <div className="trail-reviews-container">{reviewsMap}</div>

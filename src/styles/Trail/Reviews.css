@@ -9,7 +9,19 @@
     gap: 100px;
 }
 
-.trail-reviews-container {
+.trail-review-stats-average-rating {
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+}
+
+.trail-review-stats-average-stars {}
+
+.trail-review-stats-average-size {
+    font-size: .9rem;
+}
+
+.trail-review-stats-average .trail-reviews-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
