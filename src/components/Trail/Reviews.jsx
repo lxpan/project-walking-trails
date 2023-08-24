@@ -31,14 +31,35 @@ function Reviews({ reviews }) {
     // console.log(reviewStats.mean());
 
     const maxReviewRating = 5;
+    const starWidth = 16;
+
+    // returns styling for a cropped "partial" star
+    const partialImageStyleBuilder = (_rating, imgWidth) => {
+        const decimal = _rating - Math.floor(_rating);
+        // the greater the partial rating, the less of the star is cropped
+        const imageFrac = (1 - decimal) * imgWidth;
+        return {
+            clipPath: `inset(0px ${imageFrac}px 0px 0px)`,
+        };
+    };
     // iteratively add stars equal to rating, then fill to max with 'blank' stars
-    const renderRatingStars = (rating, clipped = false) => Array.from(
+    // when stars are cropped for fractional ratings, partial is true
+    const renderRatingStars = (rating, partial = false) => Array.from(
         {
             length: maxReviewRating,
         },
         (_, i) => {
-            if (i < rating) {
+            if (i < Math.floor(rating)) {
                 return <img key={i} src={reviewStarGold} alt=""></img>;
+            }
+            if (i === Math.floor(rating) && partial) {
+                return (
+                    <img
+                        key={i}
+                        src={reviewStarGold}
+                        style={partialImageStyleBuilder(rating, starWidth)}
+                    ></img>
+                );
             }
             return <img key={i} src={reviewStarWhite} alt=""></img>;
         },
@@ -67,8 +88,13 @@ function Reviews({ reviews }) {
             <h2>User reviews</h2>
             <div className="trail-review-stats">
                 <ReviewHistogram ratings={reviewStats.ratings} />
-                <div className="trail-review-stats-average-rating">
-                    {reviewStats.mean().toFixed(1)}
+                <div className="trail-review-stats-average-container">
+                    <span className="trail-review-stats-average-rating">
+                        {reviewStats.mean().toFixed(1)}
+                    </span>
+                    <div className="trail-review-stats-average-stars">
+                        {renderRatingStars(reviewStats.mean().toFixed(1), true)}
+                    </div>
                     <span className="trail-review-stats-average-size">
                         {`${reviewStats.length()} reviews`}
                     </span>
