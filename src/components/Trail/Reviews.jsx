@@ -32,15 +32,16 @@ function Reviews({ reviews }) {
 
     const maxReviewRating = 5;
     // iteratively add stars equal to rating, then fill to max with 'blank' stars
-    const renderRatingStars = (rating) => Array.from(
+    const renderRatingStars = (rating, clipped = false) => Array.from(
         {
             length: maxReviewRating,
         },
-        (_, i) => (i < rating ? (
-            <img key={i} src={reviewStarGold} alt=""></img>
-        ) : (
-            <img key={i} src={reviewStarWhite} alt=""></img>
-        )),
+        (_, i) => {
+            if (i < rating) {
+                return <img key={i} src={reviewStarGold} alt=""></img>;
+            }
+            return <img key={i} src={reviewStarWhite} alt=""></img>;
+        },
     );
 
     // Map through reviews object and render each review as a user post
