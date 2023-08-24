@@ -67,6 +67,7 @@ function Reviews({ reviews }) {
                 <ReviewHistogram ratings={reviewStats.ratings} />
                 <div>{`Average Rating: ${reviewStats.mean().toFixed(1)}`}</div>
             </div>
+            <div className="trail-section-divider" style={{ marginBottom: '20px' }}></div>
             <div className="trail-reviews-container">{reviewsMap}</div>
         </div>
     );
