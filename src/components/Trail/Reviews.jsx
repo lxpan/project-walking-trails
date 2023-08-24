@@ -62,12 +62,11 @@ function Reviews({ reviews }) {
 
     return (
         <div className="trail-reviews">
-            <h2>Review Component</h2>
+            <h2>User reviews</h2>
             <div className="trail-review-stats">
                 <ReviewHistogram ratings={reviewStats.ratings} />
                 <div>{`Average Rating: ${reviewStats.mean().toFixed(1)}`}</div>
             </div>
-            <h2>User Reviews</h2>
             <div className="trail-reviews-container">{reviewsMap}</div>
         </div>
     );
