@@ -10,6 +10,7 @@ mapboxgl.accessToken =
 function MapCore(props) {
     // console.log(props);
     const { routes, colours, mapCentre } = props;
+    let mapColourIdx = 0;
 
     const mapContainer = useRef(null);
     const map = useRef(null);
@@ -60,7 +61,8 @@ function MapCore(props) {
                         'line-cap': 'round',
                     },
                     paint: {
-                        'line-color': colours.shift(),
+                        // 'line-color': colours.shift(),
+                        'line-color': colours[mapColourIdx++],
                         'line-width': 4,
                     },
                 });
