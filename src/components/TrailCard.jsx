@@ -10,10 +10,14 @@ function TrailCard({ trail }) {
             <figure>
                 <img src={placeholderThumbnail} alt="" />
             </figure>
-            <div className="TrailCard-difficulty-ratings">{capitalise(trail.difficulty)} </div>
+            <div className="TrailCard-difficulty-ratings">
+                {trail.difficulty ? capitalise(trail.difficulty) : 'Loading...'}
+            </div>
             <div className="card-body">
                 <div className="TrailCard-trail-name">{trail.name}</div>
-                <div className="TrailCard-trail-area">{unslugify(trail.area)}</div>
+                <div className="TrailCard-trail-area">
+                    {trail.area ? unslugify(trail.area) : 'Loading...'}
+                </div>
                 <div className="TrailCard-trail-length">Length: {trail.distance} km</div>
             </div>
         </Link>
