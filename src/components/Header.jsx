@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAppState } from '../overmind';
 import '../styles/Header.css';
 
 function Header() {
+    const { isProduction } = useAppState();
     return (
         <div className="Header">
             <nav className="nav-list__left">
@@ -22,6 +24,11 @@ function Header() {
             </nav>
             <nav className="nav-list__right">
                 <ul>
+                    {!isProduction ? (
+                        <li className="Header-dev-branch">Development Branch</li>
+                    ) : (
+                        <></>
+                    )}
                     <li>Help</li>
                     <li>Profile</li>
                 </ul>

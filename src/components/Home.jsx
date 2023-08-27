@@ -17,9 +17,9 @@ function Home() {
 
     useEffect(() => {
         // actions.routes.migrate();
-        // actions.locations.migrate();
-        // actions.reviews.migrate();
-        // actions.trails.migrate();
+        actions.locations.migrate();
+        actions.reviews.migrate();
+        actions.trails.migrate();
     }, []);
 
     if (loading) {

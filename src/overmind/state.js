@@ -1,2 +1,4 @@
-const state = {};
+const state = {
+    isProduction: false,
+};
 export default state;
