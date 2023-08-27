@@ -29,7 +29,7 @@ function Home() {
     return (
         <div className="Home">
             <div className="Home-splash" style={splashStyle}>
-                <h1 className="Home-splash__h1">HOME via NPM START</h1>
+                <h1 className="Home-splash__h1">Are you ready, Lou?</h1>
             </div>
             <div className="Home-trails">
                 <div className="Home-trail-card-grid">
