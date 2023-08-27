@@ -1,7 +1,13 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
 import {
-    getFirestore, collection, doc, getDocs, setDoc, deleteDoc,
+    connectFirestoreEmulator,
+    getFirestore,
+    collection,
+    doc,
+    getDocs,
+    setDoc,
+    deleteDoc,
 } from 'firebase/firestore/lite';
 import firebaseConfig from '../firebaseConfig';
 import seedTrails from './seed';
@@ -10,11 +16,13 @@ import seedTrails from './seed';
 export const api = (() => {
     let app;
     let db;
+
     const trailsCollection = 'trails';
     return {
         initialize() {
             app = initializeApp(firebaseConfig);
             db = getFirestore(app);
+            connectFirestoreEmulator(db, '127.0.0.1', 8080);
         },
         // queries Firestore for trail data
         async nodeQuery() {

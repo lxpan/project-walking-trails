@@ -16,10 +16,10 @@ function Home() {
     };
 
     useEffect(() => {
-        // actions.trails.migrate();
         // actions.routes.migrate();
         // actions.locations.migrate();
         // actions.reviews.migrate();
+        // actions.trails.migrate();
     }, []);
 
     if (loading) {
@@ -29,7 +29,7 @@ function Home() {
     return (
         <div className="Home">
             <div className="Home-splash" style={splashStyle}>
-                <h1 className="Home-splash__h1">Are You Ready, Lou?</h1>
+                <h1 className="Home-splash__h1">HOME via NPM START</h1>
             </div>
             <div className="Home-trails">
                 <div className="Home-trail-card-grid">
