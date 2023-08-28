@@ -1,12 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import firebase from 'firebase/compat/app';
-import * as firebaseui from 'firebaseui';
+// import firebase from 'firebase/compat/app';
+// import * as firebaseui from 'firebaseui';
+import { initializeApp } from 'firebase/app';
+import {
+    getAuth, signInWithPopup, GoogleAuthProvider, getAdditionalUserInfo,
+} from 'firebase/auth';
 import { useAppState } from '../overmind';
+import firebaseConfig from '../overmind/firebaseConfig';
 import 'firebaseui/dist/firebaseui.css';
 import '../styles/Header.css';
 
 function Header() {
+    const [authedUser, setAuthedUser] = useState(null);
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const { user } = result;
+            setAuthedUser(user);
+            // IdP data available using getAdditionalUserInfo(result)
+            const additionalInfo = getAdditionalUserInfo(result);
+            console.log(`${user.email} has logged in. Info: ${user.displayName}`);
+            // ...
+        })
+        .catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const { email } = error.customData;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            console.log(
+                `Error code: ${errorCode}: ${errorMessage}
+            for account: ${email} and credential: ${credential}`,
+            );
+        });
+
     const { isProduction } = useAppState();
     return (
         <div className="Header">
@@ -27,6 +65,7 @@ function Header() {
             </nav>
             <nav className="nav-list__right">
                 <ul>
+                    {authedUser ? <li>Welcome {authedUser.displayName}</li> : <></>}
                     {!isProduction ? (
                         <li className="Header-dev-branch">Development Branch</li>
                     ) : (
