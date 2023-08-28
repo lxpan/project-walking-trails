@@ -66,7 +66,7 @@ function Reviews({ reviews }) {
     );
 
     // Map through reviews object and render each review as a user post
-    const reviewsMap = Object.values(reviews).map((review, index) => (
+    const userReviewDivArray = Object.values(reviews).map((review, index) => (
         <div key={index} className="trail-review-div">
             <div className="trail-review-header">
                 <img src={profilePic} alt="User profile picture" />
@@ -101,7 +101,7 @@ function Reviews({ reviews }) {
                 </div>
             </div>
             <div className="trail-section-divider" style={{ marginBottom: '20px' }}></div>
-            <div className="trail-reviews-container">{reviewsMap}</div>
+            <div className="trail-reviews-container">{userReviewDivArray}</div>
         </div>
     );
 }
