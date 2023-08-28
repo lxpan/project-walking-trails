@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import firebase from 'firebase/compat/app';
+import * as firebaseui from 'firebaseui';
 import { useAppState } from '../overmind';
+import 'firebaseui/dist/firebaseui.css';
 import '../styles/Header.css';
 
 function Header() {
