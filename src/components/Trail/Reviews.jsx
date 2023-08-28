@@ -3,6 +3,7 @@ import ReviewHistogram from './ReviewHistogram';
 import '../../styles/Trail/Reviews.css';
 
 import profilePic from '../../assets/images/trail/account.png';
+import profilePictureImports from '../../utils/profilePictureImports';
 import reviewStarGold from '../../assets/images/trail/star.png';
 import reviewStarWhite from '../../assets/images/trail/starWhite.png';
 
@@ -73,10 +74,14 @@ function Reviews({ reviews }) {
             month: 'long',
             day: 'numeric',
         });
+        const profilePictureIdx = index % profilePictureImports.length;
         return (
             <div key={index} className="trail-review-div">
                 <div className="trail-review-header">
-                    <img src={profilePic} alt="User profile picture" />
+                    <img
+                        src={profilePictureImports[profilePictureIdx]}
+                        alt="User profile picture"
+                    />
                     <div className="trail-review-user-date">
                         <span>{review.username}</span>
                         <span className="trail-review-date">{humanReadableDate}</span>
