@@ -5,7 +5,6 @@ import '../../styles/Trail/Reviews.css';
 import profilePic from '../../assets/images/trail/account.png';
 import reviewStarGold from '../../assets/images/trail/star.png';
 import reviewStarWhite from '../../assets/images/trail/starWhite.png';
-import TrailStats from './TrailStats';
 
 function Reviews({ reviews }) {
     if (!reviews) {
