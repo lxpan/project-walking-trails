@@ -1,3 +1,7 @@
+:root {
+    --trail-review-margin-gap: 15px;
+}
+
 .trail-reviews {
     display: flex;
     flex-direction: column;
@@ -35,7 +39,8 @@
 .trail-review-div {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--trail-review-margin-gap);
+    margin-top: var(--trail-review-margin-gap);
 }
 
 .trail-review-header {
