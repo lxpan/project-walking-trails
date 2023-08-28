@@ -66,22 +66,34 @@ function Reviews({ reviews }) {
     );
 
     // Map through reviews object and render each review as a user post
-    const userReviewDivArray = Object.values(reviews).map((review, index) => (
-        <div key={index} className="trail-review-div">
-            <div className="trail-review-header">
-                <img src={profilePic} alt="User profile picture" />
-                <div className="trail-review-user-date">
-                    <span>{review.username}</span>
-                    <span className="trail-review-date">{review.date}</span>
+    const userReviewDivArray = Object.values(reviews).map((review, index) => {
+        const timestamp = Date.parse(review.date);
+        const date = new Date(timestamp);
+        const humanReadableDate = date.toLocaleDateString('en-En', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        });
+        return (
+            <div key={index} className="trail-review-div">
+                <div className="trail-review-header">
+                    <img src={profilePic} alt="User profile picture" />
+                    <div className="trail-review-user-date">
+                        <span>{review.username}</span>
+                        <span className="trail-review-date">{humanReadableDate}</span>
+                    </div>
                 </div>
+                <div
+                    className="trail-review-rating-stars"
+                    title={`Rating of ${review.rating} stars`}
+                >
+                    {renderRatingStars(review.rating)}
+                </div>
+                <span>{review.comment}</span>
+                <div className="trail-section-divider"></div>
             </div>
-            <div className="trail-review-rating-stars" title={`Rating of ${review.rating} stars`}>
-                {renderRatingStars(review.rating)}
-            </div>
-            <span>{review.comment}</span>
-            <div className="trail-section-divider"></div>
-        </div>
-    ));
+        );
+    });
 
     return (
         <div className="trail-reviews">
