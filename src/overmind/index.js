@@ -10,6 +10,7 @@ import * as trails from './trails';
 import * as routes from './routes';
 import * as locations from './locations';
 import * as reviews from './reviews';
+import * as users from './users';
 
 export const config = merge(
     {
@@ -20,6 +21,7 @@ export const config = merge(
         routes,
         locations,
         reviews,
+        users,
     }),
 );
 
