@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // import firebase from 'firebase/compat/app';
 // import * as firebaseui from 'firebaseui';
@@ -6,18 +6,22 @@ import { initializeApp } from 'firebase/app';
 import {
     getAuth, signInWithPopup, GoogleAuthProvider, getAdditionalUserInfo,
 } from 'firebase/auth';
-import { useAppState } from '../overmind';
+import { useAppState, useActions } from '../overmind';
 import firebaseConfig from '../overmind/firebaseConfig';
 import 'firebaseui/dist/firebaseui.css';
 import '../styles/Header.css';
 
-function Header() {
-    const [authedUser, setAuthedUser] = useState(null);
-    const { isProduction } = useAppState();
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const provider = new GoogleAuthProvider();
 
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth();
-    const provider = new GoogleAuthProvider();
+function Header() {
+    const { authedUser, isProduction } = useAppState();
+    const actions = useActions();
+
+    useEffect(() => {
+        console.log(authedUser);
+    }, [authedUser]);
 
     const executeLogin = () => {
         signInWithPopup(auth, provider)
@@ -27,7 +31,7 @@ function Header() {
                 const token = credential.accessToken;
                 // The signed-in user info.
                 const { user } = result;
-                setAuthedUser(user);
+                actions.users.setUser(user);
                 // IdP data available using getAdditionalUserInfo(result)
                 const additionalInfo = getAdditionalUserInfo(result);
                 console.log(`${user.email} has logged in. Info: ${user.displayName}`);
