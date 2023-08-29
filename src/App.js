@@ -8,6 +8,7 @@ import Saved from './components/Saved';
 import Footer from './components/Footer';
 import Trail from './components/Trail/Trail';
 import Location from './components/Location';
+import Account from './components/Account';
 import './styles/App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/saved" element={<Saved />} exact />
                     <Route path="/trail/:id" element={<Trail />} />
                     <Route path="/location/:id" element={<Location />} />
+                    <Route path="account" element={<Account />} />
                 </Routes>
             </BrowserRouter>
             <Footer />
