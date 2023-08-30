@@ -19,4 +19,4 @@ Current features:
 
 ### How to run locally (WIP)
 
--   The app is currenty deployed using Firebase. To run locally, a Firebase account will have to be created in order to access the Firebase emulator, which is required to run the app locally.
+-   The app is currenty deployed using Firebase. A Firebase account will have to be created in order to access the Firebase emulator, which is required to run the app locally.
