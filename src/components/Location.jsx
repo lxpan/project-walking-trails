@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useAppState, useActions } from '../overmind';
+import { useAppState } from '../overmind';
 import TrailCard from './TrailCard';
 import { unslugify } from '../utils/utils';
 import '../styles/Location.css';
