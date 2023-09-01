@@ -1,0 +1,14 @@
+.Location-trail-card-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 20px;
+    padding: 30px;
+}
+
+.Location-trail-card-grid__heading {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin: 0;
+    padding: 0;
+}

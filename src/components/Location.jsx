@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAppState, useActions } from '../overmind';
+import TrailCard from './TrailCard';
+import { unslugify } from '../utils/utils';
 import '../styles/Location.css';
 
 function Location() {
@@ -14,19 +16,18 @@ function Location() {
     };
 
     useEffect(() => {
-        console.log(trails);
+        // console.log(trails);
     }, [trails]);
 
     return (
         <div className="Location">
-            <h1>Walking Trails in {id}</h1>
-
-            <div className="Location-top-trails-list">
-                {!trails.loading ?
+            <div className="Location-trail-card-grid">
+                <h1 className="Location-trail-card-grid__heading">
+                    Walking trails near {unslugify(id)}{' '}
+                </h1>
+                {!loading ?
                     getTrailsFromLocation().map((trail) => (
-                        <div className="trail-listing" key={trail.id}>
-                            <h3>{trail.name}</h3>
-                        </div>
+                        <TrailCard key={trail.id} trail={trail} />
                     )) :
                     'Loading...'}
             </div>
